@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Booking</title>
+</head>
+<body style="background-image: url(./photos/alexander-dummer-aS4Duj2j7r4-unsplash.jpg);" 
+    class="object-cover w-full h-full font-sans text-white bg-no-repeat bg-cover ">
+    <header>
+        <nav class="sticky top-0 py-4 px-18 bg-black-/30 backdrop-blur-md">
+            
+            <!-- Desktop View -->
+            <div class="flex items-center justify-between text-base">
+                <div class="flex items-center gap-1">
+                    <img src="/Emmy Photo/photos/public-domain-vectors-m1UovLhQKR0-unsplash.jpg" alt="Photo logo" class="w-6 h-6 rounded-2xl">
+                    <a href="" class="text-lg font-bold">EmmyPhoto</a>
+                </div>
+                
+                <div class="hidden space-x-4 md:flex">
+                    <a href="EmmyPhoto.html" class="px-4 py-2 font-medium rounded hover:bg-slate-400">Home</a>
+                    <a href="#about" class="px-4 py-2 font-medium rounded hover:bg-slate-400">About</a>
+                    <a href="#service" class="px-4 py-2 font-medium rounded hover:bg-slate-400">Services</a>
+                    <a href="#contact" class="px-4 py-2 font-medium rounded hover:bg-slate-400">Contact</a>
+                </div>
+
+                <div class="hidden md:block" >
+                    <a href="#Bookings" class="px-4 py-2 text-xl font-bold text-black rounded bg-amber-500 hover:bg-amber-400">Bookings</a>
+                </div>
+
+                <!-- Menu Toggle -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-2xl ">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile View -->
+            <div id="mobile-menu" class="absolute right-0 z-40 hidden w-1/2 py-4 mt-4 shadow-lg rounded-m3d bg-black/90 float-end me-2 backdrop-blur-md">
+                <div class="flex flex-col items-center px-4 py-2 space-y-4 text-center">
+                    <a href="EmmyPhoto.html" class="w-full px-3 py-2 font-medium rounded hover:bg-slate-300/20">Home</a>
+                    <a href="Emmyphoto.html" href="#about" class="w-full px-3 py-2 font-medium rounded hover:bg-slate-300/20">About</a>
+                    <a href="#service" class="w-full px-3 py-2 font-medium rounded hover:bg-slate-300/20">Services</a>
+                    <a href="#contact" class="w-full px-3 py-2 font-medium rounded hover:bg-slate-300/20">Contact</a>
+                    <a href="" class="w-full px-4 py-2 font-bold rounded bg-slate-400 hover:bg-slate-300/20">Bookings</a>
+                </div>
+            </div>
+
+            
+        
+            
+        </nav>
+    </header>
+    
+    <div class="w-full h-screen border border-black bg-black/60">
+
+    </div>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function(){
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        })
+
+        document.getElementsByClassName('fa-bars')[0].addEventListener('click', function(){
+            if(this.classList.contains('fa-bars')){
+                this.classList.replace('fa-bars', 'fa-xmark');
+            }else{
+                this.classList.replace('fa-xmark', 'fa-bars');
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Serif+Display:ital@0;1&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <title>Emmy | Story Behind the Lens | Lagos  Photographer </title>
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0; 
+                transform:translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+
+            }
+        }
+    </style>
+</head>
+<body 
+    style="background-image: url(./photos/alexander-dummer-aS4Duj2j7r4-unsplash.jpg);" 
+    class="object-cover w-full h-full font-sans text-white bg-no-repeat bg-cover ">
+    <main class="bg-black/70">
+        <!-- NavBar -->
+        <nav class="sticky top-0 z-50 px-12 py-5 bg-black/30 backdrop-blur-md">
+            
+            <!-- Desktop Menu -->
+            <div class="flex items-center justify-between text-base ">
+                <div class="flex items-center gap-1">
+                    <img src="/Emmy Photo/photos/public-domain-vectors-m1UovLhQKR0-unsplash.jpg" alt="Photo logo" class="w-6 h-6 rounded-2xl">
+                    <a href="" class="text-lg font-bold">Emmy<span class="text-amber-500/70">Photo</span></a>
+                </div>
+                
+                <div class="items-center hidden gap-8 text-base md:flex">
+                    <a href="#home" class="px-4 py-2 font-medium transition-colors hover:text-amber-500 ">Home</a>
+                    <a href="#about" class="px-4 py-2 font-medium transition-colors hover:text-amber-500 ">About</a>
+                    <a href="#service" class="px-4 py-2 font-medium transition-colors hover:text-amber-500 ">Services</a>
+                    <a href="#contact" class="px-4 py-2 font-medium transition-colors hover:text-amber-500 ">Contact</a>
+                </div>
+
+                
+                <a href="Emmybooking form.html" 
+                class="hidden px-6 py-2.5 text-base font-semibold text-white rounded-xl bg-amber-600 hover:bg-amber-500 md:block transition-all duration-300">Book a Session</a>
+            
+
+                <!-- Menu Toggle -->
+                
+                <button id="menu-toggle"
+                 class="text-3xl text-white md:hidden"
+                 aria-label="Toggle menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                
+            </div>
+
+            <!-- Mobile View -->
+            <div id="mobile-menu" 
+                class="hidden py-6 mt-4 border-t border-white/10 bg-black/95 backdrop-blur-md md:hidden">
+                <div class="flex flex-col items-center gap-6 px-4 py-2 text-lg ">
+                    <a href="#home" class="w-full px-3 py-2 font-medium rounded hover:bg-slate-300/20">Home</a>
+                    <a href="#about" class="w-full px-3 py-2 font-medium rounded hover:bg-slate-300/20">About</a>
+                    <a href="#service" class="w-full px-3 py-2 font-medium rounded hover:bg-slate-300/20">Services</a>
+                    <a href="#contact" class="w-full px-3 py-2 font-medium rounded hover:bg-slate-300/20">Contact</a>
+                    <a href="Emmybooking form.html" 
+                        class="w-full px-8 py-3 mt-4 font-semibold text-center rounded-2xl bg-amber-600 hover:bg-amber-500">Book a Session
+                    </a>
+                </div>
+            </div>
+
+            
+        
+            
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden" id="home" >
+            <div class="flex flex-col items-center justify-center gap-16 px-6 py-20 mx-auto md:flex-row md:py-24 lg:px-16 max-w-8xl" >
+                <!-- left Content -->
+                <div class="max-w-3xl text-center md:text-left">
+                    <h1 class="mb-6 font-serif text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">Capturing Timeless<br>Moments.</h1>
+                    <p class="max-w-md mx-auto text-lg leading-relaxed text-gray-300 md:text-xl md:mx-0">Elegant photography crafted to preserve emotions, stories, and unforgettable experiences.</p>
+                    <div 
+                        class="flex flex-col justify-center gap-4 mt-10 sm:flex-row md:justify-start">
+                        <a href="#contact"
+                        class="px-8 py-4 text-lg font-semibold transition-all duration-300 shadow-lg rounded-2xl bg-amber-600 hover:bg-amber-500 shadow-amber-600/30">Book a Session</a>
+                        
+                        <a href="#about" 
+                        class="px-8 py-4 text-lg font-medium transition-all duration-300 border border-white/40 hover:border-white/70 rounded-2xl ">Learn More <i class="mx-2 fa-solid fa-arrow-right-long"></i></a>
+                        
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <img src="/Emmy Photo/photos/emmy photo.jpeg" alt="EmmyPhoto - Timeless Wedding & Protrait Photography" 
+                    class="border shadow-2xl border-white/10 rounded-3xl max-w-[420px] h-[500px] w-full object-cover shadow-black/50 ">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 ">
+            <div class="px-6 mx-auto max-w-7xl lg:px-16">
+                <div class="flex flex-col-reverse items-center justify-center gap-16 md:gap-20 md:flex-row" >
+                    <!-- Image -->
+                    <div class="flex-shrink-0">
+                        <img src="/Emmy Photo/photos/graham-mansfield-wp9ggFHgsAI-unsplash.jpg" alt="- EmmyPhoto"
+                         class="object-cover w-full transition duration-500 border shadow-2xl border-white/20 rounded-3xl bg-slate-100 hover:scale-105 max-w-[420px] h-[420px] transform ">
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="max-w-xl text-center md:text-left">
+                        <h2 class="mb-8 font-serif text-4xl font-bold leading-tight text-white md:text-5xl">Story behind the lens</h2>
+                        
+                        <div class="space-y-6 text-lg leading-relaxed text-gray-300 " >
+                            
+                            <p class="text-xl">
+                                Hi, i'm Oguche Emmanuel Happiness, a Lagos-based photographer and visual poet.
+                            </P>
+
+                            <p>
+                                Photography, to me, is the gentle art of listening with light. I am drawn to the trembling anticipation before a bride steps forward, the burst of laughter like sudden sunlight, the unspoken glances between lovers, and the tender in-between silences where true emotion lives. 
+                            </p>
+
+                            <!-- Expandable Content -->
+                            <div id="expandable-text"
+                                class="hidden space-y-6">
+
+                                <p>
+                                    With every frame, I seek not perfection, but truth — the raw poetry of emotion and the beauty of imperfection. Whether documenting vibrant Nigerian weddings, intimate elopements, or soulful family moments, my camera becomes a bridge between the present and forever. 
+                                    
+                                </p>
+                                
+                                <p>
+                                    I've had the honor of capturing over 50 celebrations across Lagos, Abuja, and beyond. Every photography is a love letter written in time.
+                                    I would be honored to create with you.
+                                </p>
+                            </div>
+                            <!-- Read More Button -->
+                            <button id="read-more-btn" class="flex gap-2 mx-auto mt-6 font-medium transition-colors text-amber-500 hover:text-amber-400 item-center md:mx-0">
+                                Read More <span id="arrow" class="transition-transform border-none"><i class="mx-2 fa-solid fa-arrow-right-long"></i></span>
+                            </button>
+                            
+                            <!-- Action buttons -->
+                            <div class="flex flex-col justify-center gap-4 mt-12 sm:flex-row md:justify-start">
+                                
+                                <a href="#service" 
+                                    class="px-8 py-4 text-lg font-medium transition-all duration-300 border rounded-2xl hover:border-white/70 border-white/40 ">View Portfolio
+                                </a>
+                                 
+                                
+                                <a href="Emmybooking form.html" 
+                                    class="px-8 py-4 text-lg font-semibold transition-all duration-300 rounded-2xl hover:bg-amber-500 bg-amber-600 ">Book a Session
+                                </a>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-18 px-14" id="service">
+            <div class="mx-auto max-w-7xl" >
+                <div class="mb-16 text-center">
+                    <h2 class="font-serif text-5xl">Crafting Stories Through Every Frame</h2>
+                    <p class="mx-auto mt-4 text-slate-300 max-2xl">From intimate celebration to timeless protraits...</p>
+                    
+                </div>
+                
+                <div class="grid gap-8 md:grid-cols-2">
+                    <!-- Card 1 -->
+                    <div class="mx-5 overflow-hidden transition duration-500 bg-black border border-white/10 rounded-3xl hover:-translate-y-2">
+                        <div class="overflow-hidden swipper protraitSwiper">
+                            <div class="swiper-wrapper">
+                                <!-- Image 1 -->
+                                <div class="swiper-slide">
+                                    <img src="./photos/_JUL3221.jpg" alt="" class="object-cover w-full h-[300px]">
+                                </div>
+                                
+                                <!-- image 2 -->
+                                <div class="swiper-slide">
+                                    <img src="./photos/luwadlin-bosman-P_HRPYpFTNA-unsplash.jpg" alt="" class="object-cover w-full h-[300px]">
+                                </div>
+                                
+                                <div class="swiper-slide">
+                                    <img src="./photos/sandy-millar-8vaQKYnawHw-unsplash.jpg" alt="" class="object-cover w-full h-[300px]">
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                        <div class="p-8 ">
+                            <h3 class="text-2xl font-semibold font">Wedding Stories</h3>
+                            <p class="mt-4 text-gray-300">
+                                Capturing the quiet glances and emotional moments...
+                            </p>
+                        </div> 
+                        <div class="border border-gray-700">
+                            <button class="flex items-center justify-between w-full p-5 border gap-15 gap accordion-btn bg-black/40">
+                                <span class="text-xl font-semibold ">Learn More ...</span>
+                                <span class="plus-sign">+</span>
+                            </button>
+                            <div class="hidden p-6 text-gray-300 accordion-content">
+                                <ul class="space-y-2">
+                                    <li>Full-Day Coverage</li>
+                                    <li>Bridal Coverage</li>
+                                    <li>Reception Coverage</li>
+                                    <li>Professional editig</li>
+                                    <li>Online Gallery</li> 
+                                </ul>
+                                <a href="" 
+                                    class="inline-block px-6 py-3 mt-6 border rounded-lg">
+                                    Book Wedding Session
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="mx-5 overflow-hidden transition duration-500 bg-black border border-white/10 rounded-3xl hover:-translate-y-2">
+                        <div class="overflow-hidden swipper protraitSwiper">
+                            <div class="swiper-wrapper">
+                                <!-- Image 1 -->
+                                <div class="swiper-slide">
+                                    <img src="./photos/DSC_0165.JPG" alt="" class="object-cover w-full h-[300px]">
+                                </div>
+                                
+                                <!-- image 2 -->
+                                <div class="swiper-slide">
+                                    <img src="./photos/william-thomas-ny6tO4ItOEY-unsplash (1) (1).jpg" alt="" class="object-cover w-full h-[300px]">
+                                </div>
+                                
+                                <div class="swiper-slide">
+                                    <img src="./photos/stefan-stefancik-QXevDflbl8A-unsplash.jpg" alt="" class="object-cover w-full h-[300px]">
+                                </div>
+                                
+                                <div class="swiper-slide">
+                                    <img src="./photos/pic.JPG" alt="" class="object-cover w-full h-[300px]">
+                                </div> 
+                                
+                                <div class="swiper-slide">
+                                    <img src="./photos/WhatsApp Image 2026-05-19 at 15.18.03.jpeg" alt="" class="object-cover w-full h-[300px]">
+                                </div> 
+                                
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-semibold font">Protraits</h3>
+                            <p class="mt-4 text-gray-300">
+                                Authentic protraits crafted to reflect personality, emotion, and beauty of  everyday moments.
+                            </p>
+                            
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="mx-5 overflow-hidden transition duration-500 bg-black border border-white/10 rounded-3xl hover:-translate-y-2">
+                        <div class="overflow-hidden swipper protraitSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="/Emmy Photo/photos/_JUL0527.jpg" alt="" class="object-cover w-full h-[300px]">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="./photos/_JUL0292.jpg" alt="" class="object-cover w-full h-[300px]">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="./photos/2025_07_13_17_32_IMG_3114.jpg" alt="" class="object-cover w-full h-[300px]">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="./photos/_JUL0551.jpg" alt="" class="object-cover w-full h-[300px]">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="./photos/_JUL0603.jpg" alt="" class="object-cover w-full h-[300px]">
+                                </div>
+
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="p-8">
+                            <h3 class="text-2xl font-semibold font">Birthdays & Anniversaries</h3>
+                            <p class="mt-4 text-gray-300">
+                                Preserving the laughter, warmth, and memories shared during life's meaningful celebration.
+                            </p>
+                            
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="mx-5 overflow-hidden transition duration-500 bg-black border border-white/10 rounded-3xl hover:-translate-y-2 ">
+                        <div class="overflow-hidden swipper protraitSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./photos/_JUL0183.jpg" alt="" class="object-cover w-full h-[300px]">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="./photos/_JUL2665.JPG" alt="" class="object-cover w-full h-[300px]">
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="./photos/marsumilae-wTd7D9umpj8-unsplash.jpg" alt="" class="object-cover w-full h-[300px]">
+                                </div>
+                                
+                                <div class="swiper-slide">
+                                    <img src="./photos/valentin-ezGP2EB2x0E-unsplash.jpg" alt="" class="object-cover w-full h-[300px]">
+                                </div>
+                                
+                                <div class="swiper-slide">
+                                    <img src="./photos/christopher-stites-tedtXRcL1AI-unsplash.jpg" alt="" class="object-cover w-full h-[300px]">
+                                </div>
+
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="p-8">
+                            <h3 class="text-2xl font-semibold font">Creative Visual Session</h3>
+                            <p class="mt-4 text-gray-300">
+                                Cinematic imagery designed for artists, brands, and individuals who want visuals with deep character.
+                            </p>
+                            
+                        </div>
+                    </div>
+
+                </div>
+                
+                
+            </div>
+        </section>
+
+         
+        
+        <!-- Gallery -->
+
+        <!-- Contact Section -->
+        <section class="min-h-screen px-6 py-20 lg:px-16" id="contact">
+            <div class="mx-auto max-w-7xl">
+                <h1 class="mb-12 text-5xl font-bold md:text-6xl">Get In Touch <hr class="w-40 mt-3 border-amber-600 "></h1>
+
+                <div class="grid items-start grid-cols-1 gap-16 lg:grid-cols-2">
+                    <!-- left side Contact Info-->
+                    <div class="space-y-10 ">
+                        <div>
+                            <h2 class="font-mono text-4xl font-bold leading-tight leading md:text-5xl">Let's Create Timeless<br>Memories Together.</h2>
+                            <p class="max-w-md mt-6 text-lg leading-relaxed text-slate-300">I'd love to hear about your story and the memories you want to create. Whether it's weddings, protraits sessions, or intimate celebrations, every moments deserve to be preserved beautifully. I'm here to bring your vision to life.</p>
+                        </div>
+                        <!-- Contact Details -->
+                        <div class="space-y-8">
+                            <div class="flex items-start gap-4">
+                                <div class="p-3 bg-amber-600/10 rounded-2xl">
+                                    <i class="text-3xl fa-solid fa-envelope text-amber-500"></i>
+                                </div>
+                                
+                                <div>
+                                    <h3 class="text-sm font-bold tracking-widest text-amber-500">EMAIL</h3>
+                                    <p>oguseaaron07@gmail.com</p>
+                                </div>
+                                
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="p-4 bg-amber-600/10 rounded-2xl">
+                                  <i class="text-3xl fa-solid fa-phone text-amber-500"></i>  
+                                </div>
+                                
+                                <div>
+                                    <h3 class="text-sm font-bold tracking-widest text-amber-500">PHONE</h3>  
+                                    <p class="text-lg">+2349060885793</p>
+                                    <p class="text-lg">+2349029356431</p>  
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="p-4 bg-amber-600/10 rounded-2xl">
+                                  <i class="text-3xl fa-solid fa-location-dot text-amber-500"></i> 
+                                </div>
+                                <div>
+                                    <h3 class="text-sm font-bold tracking-widest text-amber-500">LOCATION</h3>
+                                    <p class="text-lg">Lagos Nigeria</p>
+                                    <p class="text-lg ">Available to travel worldwide</p>
+                                </div>
+                                
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="p-4 bg-amber-600/10 rounded-2xl">
+                                  <i class="text-3xl fa-regular fa-clock text-amber-500"></i>  
+                                </div>
+
+                                <div>
+                                    <h3 class="text-sm font-bold tracking-widest text-amber-500">AVAILABLE</h3>
+                                    <p class="text-lg">Mon - Sun: 8AM-8PM</p>
+                                </div> 
+                                
+                            </div>
+                            <!-- Social Links -->
+                            <div class="flex gap-4 pt-6">
+                                <a href="#" ><i class="px-4 py-3 mx-2 text-xl transition-all rounded-full bg-white/5 fa-brands fa-facebook-f hover:scale-110 hover:bg-white/10"></i></a>
+                                <a href="#" ><i class="p-3 mx-2 text-xl transition-all rounded-full bg-white/5 fa-brands fa-x-twitter hover:bg-white/10 hover:scale-110"></i></a>
+                                <a href="#"><i class="p-3 mx-2 text-xl transition-all rounded-full bg-white/5 fa-brands fa-linkedin-in hover:bg-white/10 hover:scale-110"></i></a>
+                                <a href="#"><i class="p-3 mx-2 text-xl transition-all rounded-full bg-white/5 fa-brands fa-instagram hover:bg-white/10 hover:scale-110" ></i></a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <!-- Right Side Contact Form  -->
+                    <form action="" method="post" class="p-8 space-y-8 border lg:p-10 border-amber-600/30 bg-white/5 backdrop-blur-xl rounded-3xl ">
+                        <h2 class="text-3xl font-bold">Send a Message <hr class="w-12 mt-2 border-amber-600/90"></h2>
+                        <div class="space-y-6">
+                            <!-- Name -->
+                            <label for="name" class="block mb-2 text-sm font-medium text-slate-400">Your Name</label>
+                            <div class="relative flex items-center text-slate-300 focus-within:text-slate-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="absolute w-5 ml-3 pointer-events-none" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                                </svg>
+                                <input type="text"
+                                    name="Yourname"
+                                    autocomplete="off"
+                                    aria-label="Yourname"
+                                    required
+                                    class="w-full py-3 pl-10 pr-4 font-semibold text-white rounded-lg outline-none ring-1 placeholder-slate-300 ring-slate-200/20 focus:ring-amber-400 focus:ring-1"
+                                >
+                            </div>
+                            <!-- Email and Event-Type -->
+                            <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                                <!-- Email -->
+                                <div>
+                                    <label for="email" class="block mb-2 text-sm font-medium text-slate-400">Email</label>
+                                    <div class="relative flex items-center text-slate-300 focus-within:text-slate-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute w-5 ml-3 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                                        </svg>
+                                        <input type="email" 
+                                            autocomplete="off"
+                                            aria-label="Yourname"
+                                            required
+                                            class="w-full px-5 py-4 font-semibold text-white rounded-lg outline-none md:w-56 ring-1 placeholder-slate-300 ring-slate-200/20 focus:ring-amber-400 focus:ring-1"
+                                        >
+                                    </div> 
+                                </div>
+                                
+                                <!-- Event_type -->
+                                <div>
+                                    <label for="Event Type" class="block mb-2 text-sm font-medium text-slate-400">Event Type</label>
+                                    <div class="flex">
+                                        <input type="text"
+                                            autocomplete="off"
+                                            aria-label="eventtype"
+                                            required
+                                            class="relative w-full px-6 py-4 font-semibold text-white rounded-lg outline-none ring-1 placeholder-slate-300 ring-slate-200/20 focus:ring-amber-400 focus:ring-1"
+                                        >
+                                        <select name="event_type" required id="" class="absolute text-slate-300  ring-0  focus:ring-0 outline-0 mx-8 my-2.5  md:mx-4.5 md:my-2.5">  
+                                            <option value="Wedding" class="px-3 py-2 border text-slate-300 bg-black/70">Wedding</option>
+                                            <option value="Anniversary" class="text-slate-300 bg-black/70">Anniversary</option>
+                                            <option value="Birthday" class="text-slate-300 bg-black/70">Birthday</option>
+                                            <option value="Protraits" class="text-slate-300 bg-black/70">Protraits</option>
+                                            <option value="Creative Shots" class="text-slate-300 bg-black/70">Creative Shots</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <!-- Event Date -->
+                            <div>
+                                <label for="date" class="block mb-2 text-sm font-medium text-slate-400">Event Date</label>
+                                <div class="relative flex items-center text-slate-300 focus-within:text-slate-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="absolute w-5 ml-3 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 2.994v2.25m10.5-2.25v2.25m-14.252 13.5V7.491a2.25 2.25 0 0 1 2.25-2.25h13.5a2.25 2.25 0 0 1 2.25 2.25v11.251m-18 0a2.25 2.25 0 0 0 2.25 2.25h13.5a2.25 2.25 0 0 0 2.25-2.25m-18 0v-7.5a2.25 2.25 0 0 1 2.25-2.25h13.5a2.25 2.25 0 0 1 2.25 2.25v7.5m-6.75-6h2.25m-9 2.25h4.5m.002-2.25h.005v.006H12v-.006Zm-.001 4.5h.006v.006h-.006v-.005Zm-2.25.001h.005v.006H9.75v-.006Zm-2.25 0h.005v.005h-.006v-.005Zm6.75-2.247h.005v.005h-.005v-.005Zm0 2.247h.006v.006h-.006v-.006Zm2.25-2.248h.006V15H16.5v-.005Z" />
+                                    </svg>
+                                    <input type=""
+                                        name="date"
+                                        autocomplete="off"
+                                        aria-label="Yourname"
+                                        class="w-full py-3 pl-10 pr-4 font-semibold text-white rounded-lg outline-none ring-1 placeholder-slate-300 ring-slate-200/20 focus:ring-amber-400 focus:ring-1"
+                                    >
+                                </div>
+                            </div>
+                            
+                            <!-- Messsage -->
+                            <div>
+                                <label for="message" class="block mb-2 text-sm font-medium text-slate-400">Tell Us Your Preference</label>
+                                <div class="relative flex text-slate-300 focus-within:text-slate-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="absolute w-5 mt-4 ml-3 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
+                                    </svg>
+                                    <textarea name="message" placeholder="Share details of your event, ideas and anything you would like me to know..." rows="3"  id="" class="w-full py-3 pl-10 pr-4 text-white rounded-lg outline-none ring-1 placeholder-slate-300 ring-slate-200/20 focus:ring-amber-400 focus:ring-1"></textarea>
+                                </div>
+                            </div>
+                            
+                            <!-- Submit -->
+                            <button type="submit" class="w-full py-5 text-lg font-semibold transition-all bg-amber-600 hover:bg-amber-500 rounded-2xl">
+                                Send Your Message
+                            
+                            </button>
+                        </div>
+                        
+                        <p class="text-sm text-center text-slate-400">Moments to last forever...</p>
+                    </form>
+    
+                </div>
+            </div>
+            
+        </section>
+
+
+    </main>
+    
+    <footer class="w-full border-t border-white/65">
+        <div class="flex flex-col gap-5 px-10 py-5 md:grid-cols-3 md:grid"  >
+           <div class="px-4 py-3 md:max-w-60">
+                <h4 class="max-w-xs text-2xl font-bold">Emmy<span class="text-amber-500/70">Photo</span> Studio</h4>
+                <p>Capturing timeless moments, through beautiful images</p>
+                <i class="px-3 mt-8 text-lg fa-brands fa-facebook-f"></i>
+                <i class="px-3 text-lg fa-brands fa-x-twitter"></i>
+                <i class="px-3 text-lg p fa-brands fa-linkedin-in"></i>
+                <i class="px-3 text-lg fa-brands fa-instagram"></i>
+           </div>
+
+           <div class="grid grid-cols-1 px-4 py-3 space-y-2 text-lg font-medium text-left w-60 md:text-center" >
+                <h4 class="mb-6 text-2xl font-bold ">Quick Links</h4>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#service">Services</a>
+                <a href="#contact">Contact</a>
+           </div>
+           
+            <div class="px-4 py-3 space-y-2">
+                <h4 class="mb-6 text-2xl font-bold ">Contact</h4>
+                <p><i class="px-3 py-2.5 mr-3 border rounded-full fa-solid fa-location-dot text-amber-600 bg-amber-600/10"></i>14 Annex Emedobi Street Ipaja Lagos</p>
+                <p><i class="p-2.5 mr-3 border rounded-full fa-solid fa-phone text-amber-600 bg-amber-600/10 "></i>+2349060885793</p>  
+                <p><i class="p-2.5 mr-3 border rounded-full fa-solid fa-envelope text-amber-600 bg-amber-600/10 "></i>Ogusaaron07@gmail.com</p>
+            </div>
+            
+            
+        </div>
+        
+        <hr class="mx-10 mt-3 border-slate-300/60">
+        <p class="mt-8 mb-2 ml-4 font-semibold text-left">&copy;EmmyPhoto 2026 All right Reserved.</p>
+        
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const protraitSwiper = new Swiper(".protraitSwiper", {
+            loop:true,
+            autoplay: {
+                delay: 1200,
+                disableOnInteraction: false,
+            },
+            
+            effect: "fade",
+            
+            speed: 1800,
+        });
+    </script>
+    <script>
+        const readMoreBtn = document.getElementById('read-more-btn');
+        const expandableText = document.getElementById('expandable-text');
+        const faArrowRightLong = document.getElementById('arrow');
+
+        readMoreBtn.addEventListener('click', function() {
+            if (expandableText.classList.contains('hidden')){
+                expandableText.classList.remove('hidden');
+                expandableText.style.animation = 'fadeIn 0.4s ease';
+                arrow.style.transform = 'rotate(180deg)';
+                readMoreBtn.innerHTML = 'Read less <span id="arrow" class="transition-transform"><i class="mx-2 fa-solid fa-arrow-down-long"></i></span>'
+            }else {
+                expandableText.classList.add('hidden');
+                arrow.style.transform = 'rotate(0deg)';
+                readMoreBtn.innerHTML = 'Read More <span id="arrow" class="transition-transform"><i class="mx-2 fa-solid fa-arrow-right-long"></i></span>';
+
+            }
+        });
+
+
+        const accordionBtns = document.querySelectorAll(".accordion-btn");
+        accordionBtns.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                const content = btn.nextElementSibling;
+                
+                const icon = btn.queryselector(".plus-sign");
+                
+                document.querySelectorAll(".accordion-content").forEach((item) => {
+                    if(item !== content) {
+                        item.classList.add("hidden");
+                        
+                        item.previousElementSibling.querySelector(".plus-sign").textContent = "+";
+                    }
+                });
+                
+                content.classList.toggle("hidden");
+                
+                icon.textContent = content.classList.contains("hidden") 
+                ? "+"
+                : "-";
+            });
+            
+        });
+        
+        document.getElementById('menu-toggle').addEventListener('click', function(){
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        })
+
+        document.getElementsByClassName('fa-bars')[0].addEventListener('click', function(){
+            if(this.classList.contains('fa-bars')){
+                this.classList.replace('fa-bars', 'fa-xmark');
+            }else{
+                this.classList.replace('fa-xmark', 'fa-bars');
+            }
+        })
+    </script>
+</body>
+</html>
