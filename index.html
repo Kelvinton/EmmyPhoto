@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
     
     <title>Emmy | Story Behind the Lens | Lagos  Photographer </title>
     <style>
@@ -207,26 +208,28 @@
                                 Capturing the quiet glances and emotional moments...
                             </p>
                         </div> 
-                        <div class="border border-gray-700">
-                            <button class="flex items-center justify-between w-full p-5 border gap-15 gap accordion-btn bg-black/40">
-                                <span class="text-xl font-semibold ">Learn More ...</span>
-                                <span class="plus-sign">+</span>
-                            </button>
-                            <div class="hidden p-6 text-gray-300 accordion-content">
-                                <ul class="space-y-2">
-                                    <li>Full-Day Coverage</li>
-                                    <li>Bridal Coverage</li>
-                                    <li>Reception Coverage</li>
-                                    <li>Professional editig</li>
-                                    <li>Online Gallery</li> 
-                                </ul>
-                                <a href="" 
-                                    class="inline-block px-6 py-3 mt-6 border rounded-lg">
-                                    Book Wedding Session
-                                </a>
-                            </div>
-                        </div>
                         
+                        <div class="border-none ">
+                            <el-dropdown >
+                                <button class="inline-flex justify-center w-full px-3 py-4 text-sm font-semibold text-white rounded-md shadow-xs gap-x-1 bg-black/20 inset-ring-0 inset-ring-gray-300 hover:bg-black/20">
+                                    Learn More
+                                    <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="-mr-1 text-gray-400 size-5">
+                                    <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                    </svg>
+                                </button>
+
+                                <el-menu anchor="bottom end" popover class="w-56 origin-top-right rounded-md bg-white shadow-lg outline-1 outline-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
+                                    <div class="py-2">
+                                    <a href="Emmybooking form.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Full-Day Coverage</a>
+                                    <a href="Emmybooking form.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Bridal Coverage</a>
+                                    <a href="Emmybooking form.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Reception Coverage</a>
+                                    <a href="Emmybooking form.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Professional editig</a>
+                                    <a href="Emmybooking form.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Online Gallery</a>
+                                
+                                    </div>
+                                </el-menu>
+                            </el-dropdown>
+                        </div>    
                     </div>
                     
                     <!-- Card 2 -->
@@ -264,6 +267,27 @@
                             </p>
                             
                         </div>
+                        <div class="mb-4 border-none ">
+                            <el-dropdown >
+                            <button class="inline-flex justify-center w-full px-3 py-4 text-sm font-semibold text-white rounded-md shadow-xs gap-x-1 bg-black/20 inset-ring-0 inset-ring-gray-300 hover:bg-black/20">
+                                Learn More
+                                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="-mr-1 text-gray-400 size-5">
+                                <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                </svg>
+                            </button>
+
+                            <el-menu anchor="bottom end" popover class="w-56 origin-top-right rounded-md bg-white shadow-lg outline-1 outline-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
+                                <div class="py-1">
+                                <a href="Emmybooking form.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Studio Sessions</a>
+                                <a href="Emmybooking form.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Outdoor Sessions</a>
+                                <a href="Emmybooking form.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Retouching Included</a>
+                                <a href="Emmybooking form.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">High Resolution Delivery</a>
+                                <a href="Emmybooking form.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Creative Directions included</a>
+                               
+                                </div>
+                            </el-menu>
+                            </el-dropdown>  
+                        </div>
                     </div>
 
                     <!-- Card 3 -->
@@ -271,7 +295,7 @@
                         <div class="overflow-hidden swipper protraitSwiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <img src="/Emmy Photo/photos/_JUL0527.jpg" alt="" class="object-cover w-full h-[300px]">
+                                    <img src="photos/_JUL0527.jpg" alt="" class="object-cover w-full h-[300px]">
                                 </div>
 
                                 <div class="swiper-slide">
@@ -298,8 +322,28 @@
                             <h3 class="text-2xl font-semibold font">Birthdays & Anniversaries</h3>
                             <p class="mt-4 text-gray-300">
                                 Preserving the laughter, warmth, and memories shared during life's meaningful celebration.
-                            </p>
-                            
+                            </p>   
+                        </div>
+                        <div class="border-none ">
+                            <el-dropdown >
+                            <button class="inline-flex justify-center w-full px-3 py-4 text-sm font-semibold text-white rounded-md shadow-xs gap-x-6 bg-black/20 inset-ring-0 inset-ring-gray-300 hover:bg-black/20">
+                                Learn More
+                                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="-mr-1 text-gray-400 size-5">
+                                <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                </svg>
+                            </button>
+
+                            <el-menu anchor="bottom end" popover class="w-56 origin-top-right rounded-md bg-white shadow-lg outline-1 outline-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
+                                <div class="py-1">
+                                <a href="Emmybooking form.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Birthday Party Coverage</a>
+                                <a href="Emmybooking form.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Edited Digital Gallery</a>
+                                <a href="Emmybooking form.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Couple Storytelling Session</a>
+                                <a href="Emmybooking form.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Natural Candid Moments</a>
+                                <a href="Emmybooking form.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Professional Editting</a>
+                               
+                                </div>
+                            </el-menu>
+                            </el-dropdown>  
                         </div>
                     </div>
 
@@ -335,8 +379,29 @@
                             <h3 class="text-2xl font-semibold font">Creative Visual Session</h3>
                             <p class="mt-4 text-gray-300">
                                 Cinematic imagery designed for artists, brands, and individuals who want visuals with deep character.
-                            </p>
-                            
+                            </p>  
+                        </div>
+                        
+                        <div class="mb-4 border-none ">
+                            <el-dropdown >
+                            <button class="inline-flex justify-center w-full px-3 py-4 text-sm font-semibold text-white rounded-md shadow-xs gap-x-6 bg-black/20 inset-ring-0 inset-ring-gray-300 hover:bg-black/20">
+                                Learn More
+                                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="-mr-1 text-gray-400 size-5">
+                                <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+                                </svg>
+                            </button>
+
+                            <el-menu anchor="bottom end" popover class="w-56 origin-top-right rounded-md bg-white shadow-lg outline-1 outline-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
+                                <div class="py-1">
+                                <a href="Emmybooking form.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Content Creator Photography</a>
+                                <a href="Emmybooking form.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Personal Lifestyle Shoots</a>
+                                <a href="Emmybooking form.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Fashion and Street Protraits</a>
+                                <a href="Emmybooking form.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Creative Direction</a>
+                                <a href="Emmybooking form.html" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Location Recommendations</a>
+                               
+                                </div>
+                            </el-menu>
+                            </el-dropdown>  
                         </div>
                     </div>
 
