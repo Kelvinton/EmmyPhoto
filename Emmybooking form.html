@@ -11,42 +11,48 @@
 <body style="background-image: url(./photos/alexander-dummer-aS4Duj2j7r4-unsplash.jpg);" 
     class="object-cover w-full h-full font-sans text-white bg-no-repeat bg-cover ">
     <header>
-        <nav class="sticky top-0 py-4 px-18 bg-black-/30 backdrop-blur-md">
+        <nav class="sticky top-0 z-50 px-12 py-4 bg-black/30 backdrop-blur-md">
             
-            <!-- Desktop View -->
-            <div class="flex items-center justify-between text-base">
+            <!-- Desktop Menu -->
+            <div class="flex items-center justify-between text-base ">
                 <div class="flex items-center gap-1">
                     <img src="photos/public-domain-vectors-m1UovLhQKR0-unsplash.jpg" alt="Photo logo" class="w-6 h-6 rounded-2xl">
-                    <a href="" class="text-lg font-bold">EmmyPhoto</a>
+                    <a href="" class="text-lg font-bold">Emmy<span class="text-amber-500/70">Photo</span></a>
                 </div>
                 
-                <div class="hidden space-x-4 md:flex">
-                    <a href="index.html" class="px-4 py-2 font-medium rounded hover:bg-slate-400">Home</a>
-                    <a href="#about" class="px-4 py-2 font-medium rounded hover:bg-slate-400">About</a>
-                    <a href="#service" class="px-4 py-2 font-medium rounded hover:bg-slate-400">Services</a>
-                    <a href="#contact" class="px-4 py-2 font-medium rounded hover:bg-slate-400">Contact</a>
+                <div class="items-center hidden gap-8 text-base md:flex">
+                    <a href="index.html" class="px-4 py-2 font-medium transition-colors hover:text-amber-500 ">Home</a>
+                    <a href="index.html" class="px-4 py-2 font-medium transition-colors hover:text-amber-500 ">About</a>
+                    <a href="index.html" class="px-4 py-2 font-medium transition-colors hover:text-amber-500 ">Services</a>
+                    <a href="index.html" class="px-4 py-2 font-medium transition-colors hover:text-amber-500 ">Contact</a>
                 </div>
 
-                <div class="hidden md:block" >
-                    <a href="#Bookings" class="px-4 py-2 text-xl font-bold text-black rounded bg-amber-500 hover:bg-amber-400">Bookings</a>
-                </div>
+                
+                <a href="#home" 
+                class="hidden px-6 py-2.5 text-base font-semibold text-white rounded-xl bg-amber-600 hover:bg-amber-500 md:block transition-all duration-300">Book a Session</a>
+            
 
                 <!-- Menu Toggle -->
-                <div class="md:hidden">
-                    <button id="menu-toggle" class="text-2xl ">
-                        <i class="fa-solid fa-bars"></i>
-                    </button>
-                </div>
+                
+                <button id="menu-toggle"
+                 class="text-3xl text-white md:hidden"
+                 aria-label="Toggle menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                
             </div>
 
             <!-- Mobile View -->
-            <div id="mobile-menu" class="absolute right-0 z-40 hidden w-1/2 py-4 mt-4 shadow-lg rounded-m3d bg-black/90 float-end me-2 backdrop-blur-md">
-                <div class="flex flex-col items-center px-4 py-2 space-y-4 text-center">
-                    <a href="EmmyPhoto.html" class="w-full px-3 py-2 font-medium rounded hover:bg-slate-300/20">Home</a>
-                    <a href="Emmyphoto.html" href="#about" class="w-full px-3 py-2 font-medium rounded hover:bg-slate-300/20">About</a>
-                    <a href="#service" class="w-full px-3 py-2 font-medium rounded hover:bg-slate-300/20">Services</a>
-                    <a href="#contact" class="w-full px-3 py-2 font-medium rounded hover:bg-slate-300/20">Contact</a>
-                    <a href="" class="w-full px-4 py-2 font-bold rounded bg-slate-400 hover:bg-slate-300/20">Bookings</a>
+            <div id="mobile-menu" 
+                class="hidden py-6 mt-4 border-t border-white/10 bg-black/95 backdrop-blur-md md:hidden">
+                <div class="flex flex-col items-center gap-6 px-4 py-2 text-lg ">
+                    <a href="index.html" class="w-full px-3 py-2 font-medium rounded hover:bg-slate-300/20">Home</a>
+                    <a href="index.html" class="w-full px-3 py-2 font-medium rounded hover:bg-slate-300/20">About</a>
+                    <a href="index.html" class="w-full px-3 py-2 font-medium rounded hover:bg-slate-300/20">Services</a>
+                    <a href="index.html" class="w-full px-3 py-2 font-medium rounded hover:bg-slate-300/20">Contact</a>
+                    <a href="Emmybooking form.html" 
+                        class="w-full px-8 py-3 mt-4 font-semibold text-center rounded-2xl bg-amber-600 hover:bg-amber-500">Book a Session
+                    </a>
                 </div>
             </div>
 
