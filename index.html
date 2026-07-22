@@ -45,6 +45,8 @@
                     <a href="#home" class="px-4 py-2 font-medium transition-colors hover:text-amber-500 ">Home</a>
                     <a href="#about" class="px-4 py-2 font-medium transition-colors hover:text-amber-500 ">About</a>
                     <a href="#service" class="px-4 py-2 font-medium transition-colors hover:text-amber-500 ">Services</a>
+                    <a href="#contact" class="px-4 py-2 font-medium transition-colors hover:text-amber-500 ">Portfolio</a>
+                    <a href="#Testimonial" class="px-4 py-2 font-medium transition-colors hover:text-amber-500 ">Testimonials</a>
                     <a href="#contact" class="px-4 py-2 font-medium transition-colors hover:text-amber-500 ">Contact</a>
                 </div>
 
@@ -65,11 +67,13 @@
 
             <!-- Mobile View -->
             <div id="mobile-menu" 
-                class="hidden py-6 mt-4 border-t border-white/10 bg-black/95 backdrop-blur-md md:hidden">
+                class="hidden py-6 mt-4 text-center border-t border-white/10 bg-black/95 backdrop-blur-md md:hidden">
                 <div class="flex flex-col items-center gap-6 px-4 py-2 text-lg ">
                     <a href="#home" class="w-full px-3 py-2 font-medium rounded hover:bg-slate-300/20">Home</a>
                     <a href="#about" class="w-full px-3 py-2 font-medium rounded hover:bg-slate-300/20">About</a>
                     <a href="#service" class="w-full px-3 py-2 font-medium rounded hover:bg-slate-300/20">Services</a>
+                     <a href="#contact" class="w-full px-3 py-2 font-medium rounded hover:bg-slate-300/20">Portfolio</a>
+                    <a href="#Testimonial" class="w-full px-3 py-2 font-medium rounded hover:bg-slate-300/20">Testimonial</a>
                     <a href="#contact" class="w-full px-3 py-2 font-medium rounded hover:bg-slate-300/20">Contact</a>
                     <a href="Emmybooking form.html" 
                         class="w-full px-8 py-3 mt-4 font-semibold text-center rounded-2xl bg-amber-600 hover:bg-amber-500">Book a Session
@@ -172,7 +176,7 @@
         </section>
 
         <!-- Services Section -->
-        <section class="py-18 px-14" id="service">
+        <section class="py-20 px-14" id="service">
             <div class="mx-auto max-w-9xl" >
                 <div class="mb-16 text-center">
                     <h2 class="font-serif text-5xl">Crafting Stories Through Every Frame</h2>
@@ -411,74 +415,276 @@
             </div>
         </section>
  
+        <!-- Portfolio carousel Section-->
+        
         <!-- Testimonial Section -->
-        <section class="section_container client_container">
-            <div class="px-8 py-8 client_content rounded-2xl lg:px-18 max-w-[550px] m-auto text-center">
-                <h2 class="font-serif text-5xl font-bold text-center section_header">What our happy client say</h2>
-                <p class="mt-8 text-xl section_description">
-                    Testimonials Highlighting Our Commitment to Quality, Exceptional Services, and Customer Satisfaction
+        <section class="py-20 section_container client_container px-14" id="Testimonial">
+            <div class="w-full m-auto text-center client_content rounded-2xl lg:px-18">
+                <h2 class="font-serif text-5xl font-bold text-center">Kind Words From Our Clients</h2>
+                <p class="max-w-3xl mx-auto mt-6 text-lg leading-8 text-gray-400">
+
+                    Every photograph tells a story, but our clients tell
+                    the experience behind those memories. Here's what
+                    they had to say after trusting EmmyPhoto with their
+                    most meaningful moments.
+
                 </p>
 
                 <!-- Slider main container -->
-                <div class="w-full mt-16 swiper">
+                <div class="w-full mt-10 swiper">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
+                        
                         <!-- Slides -->
-                        <div class="swiper-slide">
-                            <div class="grid gap-8 client_card max-w-[750px] m-auto text-center">
-                                <img src="/photos/user-1.jpg" alt="user" class="max-w-[250px] m-auto">
-                                <div>
-                                    <p class="mb-8 text-lg italic">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, magnam deserunt nesciunt dolorum cupiditate est soluta nulla ullam aperiam eligendi.
+                         
+                        <div class="flex h-auto swiper-slide">
+                            <div class="flex flex-col items-center h-full max-w-2xl gap-10 p-8 mx-auto border client_card md:flex-row rounded-3xl border-white/10 bg-white/5 backdrop-blur-lg md:p-10">
+                                <!-- Client Image -->
+                               <img
+                                    src="/photos/WhatsApp Image 2026-05-19 at 15.18.03.jpeg"
+                                    alt="Sarah & Daniel"
+                                    class="flex-shrink-0 object-cover w-64 h-80 rounded-2xl"
+                                >
+
+                                <!-- Client Review -->
+                                <div class="flex flex-col justify-between flex-1 text-center md:text-left">
+
+                                    <!-- Stars -->
+
+                                    <div class="flex justify-center gap-1 mb-5 md:justify-start">
+
+                                        <i class="fa-solid fa-star text-amber-400"></i>
+                                        <i class="fa-solid fa-star text-amber-400"></i>
+                                        <i class="fa-solid fa-star text-amber-400"></i>
+                                        <i class="fa-solid fa-star text-amber-400"></i>
+                                        <i class="fa-solid fa-star text-amber-400"></i>
+
+                                    </div>
+                                
+                                
+                                    <p class="min-h-[170px] text-lg italic leading-7 text-gray-300">
+
+                                        "EmmyPhoto didn't just capture our wedding;
+                                        they captured every emotion we felt throughout
+                                        the day. Looking through our gallery feels like
+                                        reliving every smile, tear, and joyful moment.
+                                        We couldn't have asked for a better storyteller."
+
+                                    </p>
+
+                                    <h4 class="mt-8 text-2xl font-semibold">
+                                        Sarah & Daniel
+                                    </h4>
+
+                                    <p class="text-amber-400">
+                                        Wedding Clients
                                     </p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="swiper-slide">
-                            <div class="grid gap-8 client_card max-w-[750px] m-auto text-center">
-                                <img src="/photos/user-2.jpg" alt="user" class="max-w-[250px] m-auto">
-                                <div>
-                                    <p class="mb-8 text-lg italic">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, magnam deserunt nesciunt dolorum cupiditate est soluta nulla ullam aperiam eligendi.
+                        <div class="flex h-auto swiper-slide">
+                            <div class="flex flex-col items-center h-full max-w-2xl gap-10 p-8 mx-auto border client_card md:flex-row rounded-3xl border-white/10 bg-white/5 backdrop-blur-lg md:p-10">
+                                <img src="/photos/user-2.jpg" alt="user" class="flex-shrink-0 object-cover w-64 h-80 rounded-2xl">
+                                
+                                <div class="flex flex-col justify-between flex-1 text-center md:text-left">
+
+                                    <!-- Stars -->
+
+                                    <div class="flex justify-center gap-1 mb-5 md:justify-start">
+
+                                        <i class="fa-solid fa-star text-amber-400"></i>
+                                        <i class="fa-solid fa-star text-amber-400"></i>
+                                        <i class="fa-solid fa-star text-amber-400"></i>
+                                        <i class="fa-solid fa-star text-amber-400"></i>
+                                        <i class="fa-solid fa-star text-amber-400"></i>
+
+                                    </div>
+                                    <p class="min-h-[170px] text-lg italic leading-7 text-gray-300">
+                                        "I'm usually uncomfortable in front of the camera, but EmmyPhoto made the entire experience effortless. The photos felt natural, elegant, and truly reflected who I am."
                                     </p>
+                                    <h4 class="mt-8 text-2xl font-semibold">Grace A.</h4>
+                                    <p class="text-amber-400">Lorem, ipsum.</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="swiper-slide">
-                            <div class="grid gap-8 client_card max-w-[750px] m-auto text-center">
-                                <img src="/photos/user-3.jpg" alt="user" class="max-w-[250px] m-auto">
-                                <div>
-                                    <p class="mb-8 text-lg italic">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, magnam deserunt nesciunt dolorum cupiditate est soluta nulla ullam aperiam eligendi.
+                        <div class="flex h-auto swiper-slide">
+                            <div class="flex flex-col items-center h-full max-w-2xl gap-10 p-8 mx-auto border client_card md:flex-row rounded-3xl border-white/10 bg-white/5 backdrop-blur-lg md:p-10">
+                                <img src="/photos/user-3.jpg" alt="user" class="flex-shrink-0 object-cover w-64 h-80 rounded-2xl">
+                                
+                                <div class="flex flex-col justify-between flex-1 text-center md:text-left">
+
+                                    <!-- Stars -->
+
+                                    <div class="flex justify-center gap-1 mb-5 md:justify-start">
+
+                                        <i class="fa-solid fa-star text-amber-400"></i>
+                                        <i class="fa-solid fa-star text-amber-400"></i>
+                                        <i class="fa-solid fa-star text-amber-400"></i>
+                                        <i class="fa-solid fa-star text-amber-400"></i>
+                                        <i class="fa-solid fa-star text-amber-400"></i>
+
+                                    </div>
+                                    <p class="min-h-[170px] text-lg italic leading-7 text-gray-300">
+                                        "Every important moment was beautifully documented without ever feeling staged. The attention to detail and ability to capture genuine laughter made the memories even more special."
                                     </p>
+                                    <h4 class="mt-8 text-2xl font-semibold">Micheal O.</h4>
+                                    <p class="text-amber-400">Lorem, ipsum dolor.</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="swiper-slide">
-                            <div class="grid gap-8 client_card max-w-[750px] m-auto text-center">
-                                <img src="/photos/user-4.jpg" alt="user" class="max-w-[250px] m-auto">
-                                <div>
-                                    <p class="mb-8 text-lg italic">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, magnam deserunt nesciunt dolorum cupiditate est soluta nulla ullam aperiam eligendi.
+                        <div class="flex h-auto swiper-slide">
+                            <div class="flex flex-col items-center h-full max-w-2xl gap-10 p-8 mx-auto border client_card md:flex-row rounded-3xl border-white/10 bg-white/5 backdrop-blur-lg md:p-10">
+                                <img src="/photos/user-4.jpg" alt="user" class="flex-shrink-0 object-cover w-64 h-80 rounded-2xl">
+                                
+                                <div class="flex flex-col justify-between flex-1 text-center md:text-left">
+
+                                    <!-- Stars -->
+
+                                    <div class="flex justify-center gap-1 mb-5 md:justify-start">
+
+                                        <i class="fa-solid fa-star text-amber-400"></i>
+                                        <i class="fa-solid fa-star text-amber-400"></i>
+                                        <i class="fa-solid fa-star text-amber-400"></i>
+                                        <i class="fa-solid fa-star text-amber-400"></i>
+                                        <i class="fa-solid fa-star text-amber-400"></i>
+
+                                    </div>
+                                    <p class="min-h-[170px] text-lg italic leading-7 text-gray-300">
+                                        "From start to finish, the experience was exceptional. The photographs tell our story so beautifully that we find ourselves looking through them again and again."
                                     </p>
+
+                                    <h4 class="mt-8 text-2xl font-semibold">Sarah & Jacob</h4>
+                                    <p class="text-amber-400">Lorem, ipsum.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex h-auto swiper-slide">
+                            <div class="flex flex-col items-center h-full max-w-2xl gap-10 p-8 mx-auto border client_card md:flex-row rounded-3xl border-white/10 bg-white/5 backdrop-blur-lg md:p-10">
+                                <img src="/photos/marsumilae-wTd7D9umpj8-unsplash.jpg" alt="user" class="flex-shrink-0 object-cover w-64 h-80 rounded-2xl">
+                                <div class="flex flex-col justify-between flex-1 text-center md:text-left">
+
+                                    <!-- Stars -->
+
+                                    <div class="flex justify-center gap-1 mb-5 md:justify-start">
+
+                                        <i class="fa-solid fa-star text-amber-400"></i>
+                                        <i class="fa-solid fa-star text-amber-400"></i>
+                                        <i class="fa-solid fa-star text-amber-400"></i>
+                                        <i class="fa-solid fa-star text-amber-400"></i>
+                                        <i class="fa-solid fa-star text-amber-400"></i>
+
+                                    </div>
+                                    <p class="min-h-[170px] text-lg italic leading-7 text-gray-300">
+                                        "The creativity, professionalism, and calm presence behind the camera made all the difference. Every image felt timeless, authentic, and beautifully composed."
+                                    </p>
+                                    <h4 class="mt-8 text-2xl font-semibold">Sarah & Daniel</h4>
+                                    <p class="text-amber-400">Lorem, ipsum.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex h-auto swiper-slide">
+                            <div class="flex flex-col items-center h-full max-w-2xl gap-10 p-8 mx-auto border client_card md:flex-row rounded-3xl border-white/10 bg-white/5 backdrop-blur-lg md:p-10">
+                                <img src="/photos/user-1.jpg" alt="user" class="flex-shrink-0 object-cover w-64 h-80 rounded-2xl">
+                                
+                                <div class="flex flex-col justify-between flex-1 text-center md:text-left">
+
+                                    <!-- Stars -->
+
+                                    <div class="flex justify-center gap-1 mb-5 md:justify-start">
+
+                                        <i class="fa-solid fa-star text-amber-400"></i>
+                                        <i class="fa-solid fa-star text-amber-400"></i>
+                                        <i class="fa-solid fa-star text-amber-400"></i>
+                                        <i class="fa-solid fa-star text-amber-400"></i>
+                                        <i class="fa-solid fa-star text-amber-400"></i>
+
+                                    </div>
+                                    <p class="min-h-[170px] text-lg italic leading-7 text-gray-300">
+                                        "The communication was excellent, the delivery was prompt, and the final photographs exceeded every expectation. EmmyPhoto has an incredible eye for capturing moments that matter."
+                                    </p>
+                                    <h4 class="mt-8 text-2xl font-semibold">Sarah & Daniel</h4>
+                                    <p class="text-amber-400">Lorem, ipsum.</p>
                                 </div>
                             </div>
                         </div>
                        
                     </div>
                
+                </div> 
+            </div>
+
+            <div class="grid max-w-6xl grid-cols-2 gap-8 p-8 mx-auto mt-20 border md:grid-cols-4 rounded-3xl border-white/10 bg-white/5 backdrop-blur-lg"
+            >
+
+                <div class="text-center">
+
+                    <i class="text-5xl fa-regular fa-calendar-check text-amber-500"></i>
+
+                    <h3 class="mt-4 text-4xl font-bold">
+                        5+
+                    </h3>
+
+                    <p class="mt-2 text-gray-400">
+                        Years Experience
+                    </p>
+
                 </div>
+
+                <div class="text-center">
+
+                    <i class="text-5xl fa-solid fa-camera text-amber-500"></i>
+
+                    <h3 class="mt-4 text-4xl font-bold">
+                        150+
+                    </h3>
+
+                    <p class="mt-2 text-gray-400">
+                        Sessions Captured
+                    </p>
+
+                </div>
+
+                <div class="text-center">
+
+                    <i class="text-5xl fa-regular fa-images text-amber-500"></i>
+
+                    <h3 class="mt-4 text-4xl font-bold">
+                        2000+
+                    </h3>
+
+                    <p class="mt-2 text-gray-400">
+                        Edited Photos Delivered
+                    </p>
+
+                </div>
+
+                <div class="text-center">
+
+                    <i class="text-5xl fa-regular fa-face-smile text-amber-500"></i>
+
+                    <h3 class="mt-4 text-4xl font-bold">
+                        98%
+                    </h3>
+
+                    <p class="mt-2 text-gray-400">
+                        Client Satisfaction
+                    </p>
+
+                </div>
+
             </div>
         </section>
          
         
-        <!-- Gallery Section-->
+        
 
         <!-- Contact Section -->
-        <section class="min-h-screen px-6 py-20 lg:px-16" id="contact">
+        <section class="min-h-screen px-12 py-20 lg:px-16" id="contact">
             <div class="mx-auto max-w-7xl">
                 <h1 class="mb-12 text-5xl font-bold md:text-6xl">Get In Touch <hr class="w-40 mt-3 border-amber-600 "></h1>
 
@@ -696,22 +902,28 @@
             speed: 1800,
         });
 
-        const swiper = new Swiper (".swiper", {
-            slidesPerView: "auto",
-            
-            spaceBetween: 20,
-            
-            loop:true,
+        const swiper = new Swiper(".swiper", {
+            slidesPerView: 1,
 
-            
-            speed: 5000,
+            spaceBetween: 24,
+
+            loop: true,
+
+            speed: 800,
 
             autoplay: {
-                delay: 0,
+                delay: 4000,
                 disableOnInteraction: false,
+                pauseOnMouseEnter: true,
             },
 
-            allowTouchMove: false,
+            grabCursor: true,
+
+            breakpoints: {
+                768: {
+                    slidesPerView: 1,
+                }
+            }
         });
         
     </script>
