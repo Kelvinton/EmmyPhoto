@@ -5,12 +5,7 @@ module.exports = {
             colors: {
                 //test: "#FAFCFD"
 
-            }, 
-
-            fontFamily: {
-            sans: ['poppins', 'Inter' ,'sans-serif'],
-            serif: ['Coromorant Garamond','Playfair Display', 'Libre' ,'serif'],
-            },
+            }
             
         },
         
