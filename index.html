@@ -37,15 +37,15 @@
             <!-- Desktop Menu -->
             <div class="flex items-center justify-between text-base ">
                 <div class="flex items-center gap-1">
-                    <img src="photos/public-domain-vectors-m1UovLhQKR0-unsplash.jpg" alt="Photo logo" class="w-6 h-6 rounded-2xl">
-                    <a href="" class="text-lg font-bold">Emmy<span class="text-amber-500/70">Photo</span></a>
+                    <a href="#home"><img src="photos/public-domain-vectors-m1UovLhQKR0-unsplash.jpg" alt="Photo logo" class="w-6 h-6 rounded-2xl"></a>
+                    <a href="#home" class="text-lg font-bold">Emmy<span class="text-amber-500/70">Photo</span></a>
                 </div>
                 
                 <div class="items-center hidden gap-8 text-base md:flex">
                     <a href="#home" class="px-4 py-2 font-medium transition-colors hover:text-amber-500 ">Home</a>
                     <a href="#about" class="px-4 py-2 font-medium transition-colors hover:text-amber-500 ">About</a>
                     <a href="#service" class="px-4 py-2 font-medium transition-colors hover:text-amber-500 ">Services</a>
-                    <a href="#contact" class="px-4 py-2 font-medium transition-colors hover:text-amber-500 ">Portfolio</a>
+                    <a href="#portfolio" class="px-4 py-2 font-medium transition-colors hover:text-amber-500 ">Portfolio</a>
                     <a href="#Testimonial" class="px-4 py-2 font-medium transition-colors hover:text-amber-500 ">Testimonials</a>
                     <a href="#contact" class="px-4 py-2 font-medium transition-colors hover:text-amber-500 ">Contact</a>
                 </div>
@@ -420,6 +420,162 @@
         </section>
  
         <!-- Portfolio carousel Section-->
+        <section id="portfolio" class="px-4 py-20 bg-black sm:px-6 lg:px-16">
+
+            <div class="mx-auto max-w-7xl">
+
+                <!-- Heading -->
+                <div class="mb-10 text-center">
+                    <p class="text-sm tracking-[0.2em] text-amber-500 uppercase">
+                        My Work
+                    </p>
+
+                    <h2 class="mt-3 text-4xl font-bold sm:text-5xl">
+                        Selected Portfolio
+                    </h2>
+
+                    <p class="max-w-xl mx-auto mt-4 text-slate-400">
+                        A collection of moments I've captured and turned into timeless memories.
+                    </p>
+                </div>
+
+
+                <!-- Portfolio Carousel -->
+                <div class="relative">
+
+                    <div class="swiper portfolioSwiper">
+
+                        <div class="swiper-wrapper">
+
+                            <!-- Image 1 -->
+                            <div class="swiper-slide">
+                                <button
+                                    type="button"
+                                    onclick="openLightbox(0)"
+                                    class="block w-full overflow-hidden rounded-2xl group"
+                                >
+                                    <img
+                                        src="photos/wedding-1.jpg"
+                                        alt="Wedding photography"
+                                        class="object-cover w-full h-[420px] transition duration-500 group-hover:scale-105"
+                                    >
+                                </button>
+                            </div>
+
+
+                            <!-- Image 2 -->
+                            <div class="swiper-slide">
+                                <button
+                                    type="button"
+                                    onclick="openLightbox(1)"
+                                    class="block w-full overflow-hidden rounded-2xl group"
+                                >
+                                    <img
+                                        src="photos/stefan-stefancik-QXevDflbl8A-unsplash.jpg"
+                                        alt="Portrait photography"
+                                        class="object-cover w-full h-[420px] transition duration-500 group-hover:scale-105"
+                                    >
+                                </button>
+                            </div>
+
+
+                            <!-- Image 3 -->
+                            <div class="swiper-slide">
+                                <button
+                                    type="button"
+                                    onclick="openLightbox(2)"
+                                    class="block w-full overflow-hidden rounded-2xl group"
+                                >
+                                    <img
+                                        src="photos/Birthday-4.jpg"
+                                        alt="Birthday photography"
+                                        class="object-cover w-full h-[420px] transition duration-500 group-hover:scale-105"
+                                    >
+                                </button>
+                            </div>
+
+
+                            <!-- Image 4 -->
+                            <div class="swiper-slide">
+                                <button
+                                    type="button"
+                                    onclick="openLightbox(3)"
+                                    class="block w-full overflow-hidden rounded-2xl group"
+                                >
+                                    <img
+                                        src="photos/christopher-stites-tedtXRcL1AI-unsplash.jpg"
+                                        alt="Lifestyle photography"
+                                        class="object-cover w-full h-[420px] transition duration-500 group-hover:scale-105"
+                                    >
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Navigation -->
+                    <button
+                        class="absolute z-10 flex items-center justify-center w-10 h-10 text-white -translate-y-1/2 rounded-full portfolio-prev left-2 top-1/2 bg-black/70 backdrop-blur hover:bg-amber-500"
+                    >
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <button
+                        class="absolute z-10 flex items-center justify-center w-10 h-10 text-white -translate-y-1/2 rounded-full portfolio-next right-2 top-1/2 bg-black/70 backdrop-blur hover:bg-amber-500"
+                    >
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                </div>
+
+            </div>
+            
+            <!-- LIGHTBOX -->
+            <div
+                id="lightbox"
+                class="fixed inset-0 z-50 items-center justify-center hidden p-4 bg-black/95"
+            >
+
+                <!-- Close -->
+                <button
+                    onclick="closeLightbox()"
+                    class="absolute z-50 flex items-center justify-center w-12 h-12 text-2xl text-white rounded-full right-5 top-5 bg-white/10 hover:bg-amber-500"
+                >
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+
+                <!-- Previous -->
+                <button
+                    onclick="previousImage()"
+                    class="absolute z-50 flex items-center justify-center w-12 h-12 text-white -translate-y-1/2 rounded-full left-4 top-1/2 bg-white/10 hover:bg-amber-500"
+                >
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+
+                <!-- Image -->
+                <img
+                    id="lightboxImage"
+                    src=""
+                    alt=""
+                    class="max-h-[85vh] max-w-[90vw] rounded-lg object-contain"
+                >
+
+
+                <!-- Next -->
+                <button
+                    onclick="nextImage()"
+                    class="absolute z-50 flex items-center justify-center w-12 h-12 text-white -translate-y-1/2 rounded-full right-4 top-1/2 bg-white/10 hover:bg-amber-500"
+                >
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+            </div>
+
+        </section>
         
         <!-- Testimonial Section -->
         <section class="py-20 section_container client_container px-14" id="Testimonial">
@@ -881,7 +1037,7 @@
                             </div>
                             
                             <!-- Messsage -->
-                            <div>
+                            <!-- <div>
                                 <label for="message" class="block mb-2 text-sm font-medium text-slate-400">Tell Us Your Preference</label>
                                 <div class="relative flex text-slate-300 focus-within:text-slate-400">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="absolute w-5 mt-4 ml-3 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -889,7 +1045,7 @@
                                     </svg>
                                     <textarea name="message" placeholder="Share details of your event, ideas and anything you would like me to know..." rows="3"  id="" class="w-full py-3 pl-10 pr-4 text-white rounded-lg outline-none ring-1 placeholder-slate-300 ring-slate-200/20 focus:ring-amber-400 focus:ring-1"></textarea>
                                 </div>
-                            </div>
+                            </div> -->
                             
                             <!-- Submit -->
                             <button type="submit" class="w-full py-5 text-lg font-semibold transition-all bg-amber-600 hover:bg-amber-500 rounded-2xl">
@@ -1001,6 +1157,77 @@
             
         });
 
+        const portfolioImages = [
+            "photos/wedding-1.jpg",
+            "photos/stefan-stefancik-QXevDflbl8A-unsplash.jpg",
+            "photos/Birthday-4.jpg",
+            "photos/christopher-stites-tedtXRcL1AI-unsplash.jpg"
+        ];
+
+        let currentImage = 0;
+
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImage = document.getElementById("lightboxImage");
+
+
+        function openLightbox(index) {
+
+            currentImage = index;
+
+            lightboxImage.src = portfolioImages[currentImage];
+
+            lightbox.classList.remove("hidden");
+            lightbox.classList.add("flex");
+
+            document.body.classList.add("overflow-hidden");
+        }
+
+
+        function closeLightbox() {
+
+            lightbox.classList.add("hidden");
+            lightbox.classList.remove("flex");
+
+            document.body.classList.remove("overflow-hidden");
+        }
+
+
+        function nextImage() {
+
+            currentImage =
+                (currentImage + 1) % portfolioImages.length;
+
+            lightboxImage.src = portfolioImages[currentImage];
+        }
+
+
+        function previousImage() {
+
+            currentImage =
+                (currentImage - 1 + portfolioImages.length)
+                % portfolioImages.length;
+
+            lightboxImage.src = portfolioImages[currentImage];
+        }
+
+
+        // Close with ESC
+        document.addEventListener("keydown", (event) => {
+
+            if (event.key === "Escape") {
+                closeLightbox();
+            }
+
+            if (event.key === "ArrowRight") {
+                nextImage();
+            }
+
+            if (event.key === "ArrowLeft") {
+                previousImage();
+            }
+
+        });
+
         
 
         const protraitSwiper = new Swiper(".protraitSwiper", {
@@ -1037,6 +1264,30 @@
                     slidesPerView: 1,
                 }
             }
+        });
+
+        const portfolioSwiper = new Swiper(".portfolioSwiper", {
+
+            slidesPerView: 1,
+            spaceBetween: 20,
+
+            navigation: {
+                nextEl: ".portfolio-next",
+                prevEl: ".portfolio-prev",
+            },
+
+            breakpoints: {
+
+                640: {
+                    slidesPerView: 2,
+                },
+
+                1024: {
+                    slidesPerView: 3,
+                }
+
+            }
+
         });
         
         
