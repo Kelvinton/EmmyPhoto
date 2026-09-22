@@ -30,12 +30,12 @@
 <body 
     style="background-image: url(photos/alexander-dummer-aS4Duj2j7r4-unsplash.jpg);" 
     class="object-cover w-full h-full font-sans text-white bg-no-repeat bg-cover ">
-    <main class="bg-black/70"> 
+    <main class="bg-black/85"> 
         <!-- NavBar -->
         <nav class="sticky top-0 z-50 px-12 py-5 bg-black/30 backdrop-blur-md">
             
             <!-- Desktop Menu -->
-            <div class="flex items-center justify-between text-base ">
+            <div class="flex items-center justify-between mx-auto text-base max-w-7xl">
                 <div class="flex items-center gap-1">
                     <a href="#home"><img src="photos/public-domain-vectors-m1UovLhQKR0-unsplash.jpg" alt="Photo logo" class="w-6 h-6 rounded-2xl"></a>
                     <a href="#home" class="text-lg font-bold">Emmy<span class="text-amber-500/70">Photo</span></a>
@@ -177,7 +177,7 @@
 
         <!-- Services Section -->
         <section class="py-20 px-14" id="service">
-            <div class="mx-auto max-w-9xl" >
+            <div class="mx-auto max-w-7xl" >
                 <div class="mb-16 text-center">
                     <h2 class="font-serif text-5xl">Crafting Stories Through Every Frame</h2>
                     <p class="mx-auto mt-4 text-slate-300 max-2xl">From intimate celebration to timeless protraits...</p>
@@ -447,82 +447,133 @@
 
                         <div class="swiper-wrapper">
 
-                            <!-- Image 1 -->
+
+                            <!-- WEDDING -->
                             <div class="swiper-slide">
                                 <button
                                     type="button"
-                                    onclick="openLightbox(0)"
-                                    class="block w-full overflow-hidden rounded-2xl group"
+                                    onclick="openGallery('wedding')"
+                                    class="relative block w-full overflow-hidden rounded-2xl group"
                                 >
                                     <img
                                         src="photos/wedding-1.jpg"
                                         alt="Wedding photography"
                                         class="object-cover w-full h-[420px] transition duration-500 group-hover:scale-105"
                                     >
+
+                                    <div class="absolute inset-0 flex items-end p-6 bg-gradient-to-t from-black/80 via-transparent to-transparent">
+                                        <div class="text-left">
+                                            <p class="text-sm tracking-widest uppercase text-amber-500">
+                                                Portfolio
+                                            </p>
+
+                                            <h3 class="mt-1 text-2xl font-bold text-white">
+                                                Weddings
+                                            </h3>
+                                        </div>
+                                    </div>
                                 </button>
                             </div>
 
 
-                            <!-- Image 2 -->
+                            <!-- PORTRAIT -->
                             <div class="swiper-slide">
                                 <button
                                     type="button"
-                                    onclick="openLightbox(1)"
-                                    class="block w-full overflow-hidden rounded-2xl group"
+                                    onclick="openGallery('portrait')"
+                                    class="relative block w-full overflow-hidden rounded-2xl group"
                                 >
                                     <img
                                         src="photos/stefan-stefancik-QXevDflbl8A-unsplash.jpg"
                                         alt="Portrait photography"
                                         class="object-cover w-full h-[420px] transition duration-500 group-hover:scale-105"
                                     >
+
+                                    <div class="absolute inset-0 flex items-end p-6 bg-gradient-to-t from-black/80 via-transparent to-transparent">
+                                        <div class="text-left">
+                                            <p class="text-sm tracking-widest uppercase text-amber-500">
+                                                Portfolio
+                                            </p>
+
+                                            <h3 class="mt-1 text-2xl font-bold text-white">
+                                                Portraits
+                                            </h3>
+                                        </div>
+                                    </div>
                                 </button>
                             </div>
 
 
-                            <!-- Image 3 -->
+                            <!-- BIRTHDAY -->
                             <div class="swiper-slide">
                                 <button
                                     type="button"
-                                    onclick="openLightbox(2)"
-                                    class="block w-full overflow-hidden rounded-2xl group"
+                                    onclick="openGallery('birthday')"
+                                    class="relative block w-full overflow-hidden rounded-2xl group"
                                 >
                                     <img
                                         src="photos/Birthday-4.jpg"
                                         alt="Birthday photography"
                                         class="object-cover w-full h-[420px] transition duration-500 group-hover:scale-105"
                                     >
+
+                                    <div class="absolute inset-0 flex items-end p-6 bg-gradient-to-t from-black/80 via-transparent to-transparent">
+                                        <div class="text-left">
+                                            <p class="text-sm tracking-widest uppercase text-amber-500">
+                                                Portfolio
+                                            </p>
+
+                                            <h3 class="mt-1 text-2xl font-bold text-white">
+                                                Birthdays
+                                            </h3>
+                                        </div>
+                                    </div>
                                 </button>
                             </div>
 
 
-                            <!-- Image 4 -->
+                            <!-- LIFESTYLE -->
                             <div class="swiper-slide">
                                 <button
                                     type="button"
-                                    onclick="openLightbox(3)"
-                                    class="block w-full overflow-hidden rounded-2xl group"
+                                    onclick="openGallery('lifestyle')"
+                                    class="relative block w-full overflow-hidden rounded-2xl group"
                                 >
                                     <img
                                         src="photos/christopher-stites-tedtXRcL1AI-unsplash.jpg"
                                         alt="Lifestyle photography"
                                         class="object-cover w-full h-[420px] transition duration-500 group-hover:scale-105"
                                     >
+
+                                    <div class="absolute inset-0 flex items-end p-6 bg-gradient-to-t from-black/80 via-transparent to-transparent">
+                                        <div class="text-left">
+                                            <p class="text-sm tracking-widest uppercase text-amber-500">
+                                                Portfolio
+                                            </p>
+
+                                            <h3 class="mt-1 text-2xl font-bold text-white">
+                                                Lifestyle
+                                            </h3>
+                                        </div>
+                                    </div>
                                 </button>
                             </div>
 
-                        </div>
 
+                        </div>
                     </div>
 
 
-                    <!-- Navigation -->
+                    <!-- Main carousel navigation -->
                     <button
+                        type="button"
                         class="absolute z-10 flex items-center justify-center w-10 h-10 text-white -translate-y-1/2 rounded-full portfolio-prev left-2 top-1/2 bg-black/70 backdrop-blur hover:bg-amber-500"
                     >
                         <i class="fa-solid fa-chevron-left"></i>
                     </button>
 
                     <button
+                        type="button"
                         class="absolute z-10 flex items-center justify-center w-10 h-10 text-white -translate-y-1/2 rounded-full portfolio-next right-2 top-1/2 bg-black/70 backdrop-blur hover:bg-amber-500"
                     >
                         <i class="fa-solid fa-chevron-right"></i>
@@ -531,16 +582,25 @@
                 </div>
 
             </div>
+
+
+            <!-- ================================= -->
+            <!-- CATEGORY LIGHTBOX -->
+            <!-- ================================= -->
+
             
-            <!-- LIGHTBOX -->
-            <div
+
+        </section>
+
+        <div
                 id="lightbox"
                 class="fixed inset-0 z-50 items-center justify-center hidden p-4 bg-black/95"
             >
 
                 <!-- Close -->
                 <button
-                    onclick="closeLightbox()"
+                    type="button"
+                    onclick="closeGallery()"
                     class="absolute z-50 flex items-center justify-center w-12 h-12 text-2xl text-white rounded-full right-5 top-5 bg-white/10 hover:bg-amber-500"
                 >
                     <i class="fa-solid fa-xmark"></i>
@@ -549,37 +609,51 @@
 
                 <!-- Previous -->
                 <button
-                    onclick="previousImage()"
+                    type="button"
+                    onclick="previousGalleryImage()"
                     class="absolute z-50 flex items-center justify-center w-12 h-12 text-white -translate-y-1/2 rounded-full left-4 top-1/2 bg-white/10 hover:bg-amber-500"
                 >
                     <i class="fa-solid fa-chevron-left"></i>
                 </button>
 
 
-                <!-- Image -->
-                <img
-                    id="lightboxImage"
-                    src=""
-                    alt=""
-                    class="max-h-[85vh] max-w-[90vw] rounded-lg object-contain"
-                >
+                <!-- Image + title -->
+                <div class="flex flex-col items-center">
+
+                    <img
+                        id="lightboxImage"
+                        src=""
+                        alt=""
+                        class="max-h-[75vh] max-w-[90vw] rounded-lg object-contain"
+                    >
+
+                    <p
+                        id="lightboxTitle"
+                        class="mt-4 text-lg font-medium text-white"
+                    ></p>
+
+                    <p
+                        id="lightboxCounter"
+                        class="mt-1 text-sm text-slate-400"
+                    ></p>
+
+                </div>
 
 
                 <!-- Next -->
                 <button
-                    onclick="nextImage()"
+                    type="button"
+                    onclick="nextGalleryImage()"
                     class="absolute z-50 flex items-center justify-center w-12 h-12 text-white -translate-y-1/2 rounded-full right-4 top-1/2 bg-white/10 hover:bg-amber-500"
                 >
                     <i class="fa-solid fa-chevron-right"></i>
                 </button>
 
-            </div>
-
-        </section>
+        </div>
         
         <!-- Testimonial Section -->
         <section class="py-20 section_container client_container px-14" id="Testimonial">
-            <div class="w-full m-auto text-center client_content rounded-2xl lg:px-18">
+            <div class="w-full mx-auto text-center max-w-7xl client_content rounded-2xl lg:px-18">
                 <h2 class="font-serif text-5xl font-bold text-center">Kind Words From Our Clients</h2>
                 <p class="max-w-3xl mx-auto mt-6 text-lg leading-8 text-gray-400">
 
@@ -1065,42 +1139,246 @@
 
     </main>
     
-    <footer class="w-full border-t border-white/65">
-        <div class="grid grid-cols-1 gap-5 px-10 py-5 md:flex md:justify-between"  >
-           <div class="px-4 py-3 md:max-w-60">
-                <h4 class="max-w-xs text-2xl font-bold">Emmy<span class="text-amber-500/70">Photo</span> Studio</h4>
-                <p>Capturing timeless moments, through beautiful images</p>
-                <i class="px-3 mt-8 text-lg fa-brands fa-facebook-f"></i>
-                <i class="px-3 text-lg fa-brands fa-x-twitter"></i>
-                <i class="px-3 text-lg p fa-brands fa-linkedin-in"></i>
-                <i class="px-3 text-lg fa-brands fa-instagram"></i>
-           </div>
+    <footer class="bg-black border-t border-white/10">
 
-           <div class="grid grid-cols-1 px-4 py-3 space-y-2 text-lg font-medium text-left w-60 md:text-center" >
-                <h4 class="mb-6 text-2xl font-bold ">Quick Links</h4>
-                <a href="#home" class="transition-colors hover:text-amber-500">Home</a>
-                <a href="#about" class="transition-colors hover:text-amber-500">About</a>
-                <a href="#service" class="transition-colors hover:text-amber-500">Services</a>
-                <a href="#contact" class="transition-colors hover:text-amber-500">Contact</a>
-           </div>
-           
-            <!-- <div class="px-4 py-3 space-y-2">
-                <h4 class="mb-6 text-2xl font-bold ">Contact</h4>
-                <p><i class="px-3 py-2.5 mr-3 border rounded-full fa-solid fa-location-dot text-amber-600 bg-amber-600/10"></i>14 Annex Emedobi Street Ipaja Lagos</p>
-                <p><i class="p-2.5 mr-3 border rounded-full fa-solid fa-phone text-amber-600 bg-amber-600/10 "></i>+2349060885793</p>  
-                <p><i class="p-2.5 mr-3 border rounded-full fa-solid fa-envelope text-amber-600 bg-amber-600/10 "></i>Ogusaaron07@gmail.com</p>
-            </div> -->
-            
-            
+        <!-- Main Footer -->
+        <div class="px-6 py-16 mx-auto max-w-7xl sm:px-8 lg:px-12">
+
+            <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
+
+
+                <!-- Brand -->
+                <div class="lg:col-span-2">
+
+                    <h2 class="text-3xl font-bold tracking-tight">
+                        Emmy<span class="text-amber-500">Photo</span>
+                    </h2>
+
+                    <p class="max-w-md mt-5 text-base leading-7 text-slate-300">
+                        Capturing timeless moments through beautiful images,
+                        genuine emotions, and stories worth remembering.
+                    </p>
+
+
+                    <!-- Socials -->
+                    <div class="flex gap-3 mt-7">
+
+                        <a
+                            href="#"
+                            aria-label="Facebook"
+                            class="flex items-center justify-center w-10 h-10 transition-all duration-300 border rounded-full border-white/10 bg-white/5 hover:border-amber-500/40 hover:bg-amber-500 hover:text-black"
+                        >
+                            <i class="text-sm fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a
+                            href="#"
+                            aria-label="X"
+                            class="flex items-center justify-center w-10 h-10 transition-all duration-300 border rounded-full border-white/10 bg-white/5 hover:border-amber-500/40 hover:bg-amber-500 hover:text-black"
+                        >
+                            <i class="text-sm fa-brands fa-x-twitter"></i>
+                        </a>
+
+                        <a
+                            href="#"
+                            aria-label="LinkedIn"
+                            class="flex items-center justify-center w-10 h-10 transition-all duration-300 border rounded-full border-white/10 bg-white/5 hover:border-amber-500/40 hover:bg-amber-500 hover:text-black"
+                        >
+                            <i class="text-sm fa-brands fa-linkedin-in"></i>
+                        </a>
+
+                        <a
+                            href="#"
+                            aria-label="Instagram"
+                            class="flex items-center justify-center w-10 h-10 transition-all duration-300 border rounded-full border-white/10 bg-white/5 hover:border-amber-500/40 hover:bg-amber-500 hover:text-black"
+                        >
+                            <i class="text-sm fa-brands fa-instagram"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Quick Links -->
+                <div>
+
+                    <h3 class="mb-5 text-sm font-semibold tracking-widest uppercase text-amber-500">
+                        Explore
+                    </h3>
+
+                    <ul class="space-y-3">
+
+                        <li>
+                            <a
+                                href="#home"
+                                class="transition-colors text-slate-300 hover:text-white"
+                            >
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="#about"
+                                class="transition-colors text-slate-300 hover:text-white"
+                            >
+                                About Me
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="#service"
+                                class="transition-colors text-slate-300 hover:text-white"
+                            >
+                                Services
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="#portfolio"
+                                class="transition-colors text-slate-300 hover:text-white"
+                            >
+                                Portfolio
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="#contact"
+                                class="transition-colors text-slate-300 hover:text-white"
+                            >
+                                Contact
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- Services -->
+                <div>
+
+                    <h3 class="mb-5 text-sm font-semibold tracking-widest uppercase text-amber-500">
+                        Services
+                    </h3>
+
+                    <ul class="space-y-3">
+
+                        <li>
+                            <a
+                                href="#service"
+                                class="transition-colors text-slate-300 hover:text-white"
+                            >
+                                Wedding Photography
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="#service"
+                                class="transition-colors text-slate-300 hover:text-white"
+                            >
+                                Birthday Photography
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="#service"
+                                class="transition-colors text-slate-300 hover:text-white"
+                            >
+                                Portrait Sessions
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="#service"
+                                class="transition-colors text-slate-300 hover:text-white"
+                            >
+                                Lifestyle Photography
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- CTA -->
+            <div
+                class="flex flex-col items-start justify-between gap-6 p-6 border mt-14 rounded-2xl border-amber-500/20 bg-amber-500/5 sm:flex-row sm:items-center"
+            >
+
+                <div>
+                    <p class="text-xl font-semibold">
+                        Have a moment worth capturing?
+                    </p>
+
+                    <p class="mt-1 text-sm text-slate-300">
+                        Let's turn it into something timeless.
+                    </p>
+                </div>
+
+
+                <a
+                    href="Emmybooking form.html"
+                    class="inline-flex items-center gap-2 px-6 py-3 font-medium text-black transition-all duration-300 rounded-full bg-amber-500 whitespace-nowrap hover:bg-amber-400"
+                >
+                    Book a Session
+
+                    <i class="text-sm fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
         </div>
-        
-        <hr class="mx-10 mt-3 border-slate-300/60">
-        <p class="mt-8 mb-2 ml-4 font-semibold text-center">&copy;EmmyPhoto 2026 All right Reserved.</p>
-        
+
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-white/10">
+
+            <div
+                class="flex flex-col items-center justify-between gap-3 px-6 py-6 mx-auto text-sm max-w-7xl sm:px-8 md:flex-row lg:px-12"
+            >
+
+                <p class="text-slate-300">
+                    © 2026 EmmyPhoto Studio. All rights reserved.
+                </p>
+
+                <div class="flex gap-5 text-slate-300">
+
+                    <a
+                        href="#"
+                        class="transition-colors hover:text-amber-500"
+                    >
+                        Privacy Policy
+                    </a>
+
+                    <a
+                        href="#"
+                        class="transition-colors hover:text-amber-500"
+                    >
+                        Terms of Service
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
+        
         document.getElementById('menu-toggle').addEventListener('click', function(){
             const mobileMenu = document.getElementById('mobile-menu');
             mobileMenu.classList.toggle('hidden');
@@ -1157,73 +1435,149 @@
             
         });
 
-        const portfolioImages = [
-            "photos/wedding-1.jpg",
-            "photos/stefan-stefancik-QXevDflbl8A-unsplash.jpg",
-            "photos/Birthday-4.jpg",
-            "photos/christopher-stites-tedtXRcL1AI-unsplash.jpg"
-        ];
+        const galleries = {
+            wedding: {
+                title: "Wedding Photography",
+                images: [
+                    "photos/wedding-1.jpg",
+                    "photos/wedding-2.jpg",
+                    "photos/wedding-3.jpg",
+                    "photos/wedding-4.jpg"
+                ]
+            },
 
-        let currentImage = 0;
+            birthday: {
+                title: "Birthday Photography",
+                images: [
+                    "photos/Birthday-1.jpg",
+                    "photos/Birthday-2.jpg",
+                    "photos/Birthday-3.jpg",
+                    "photos/Birthday-4.jpg",
+                    "photos/Birthday-5.jpg"
+                ]
+            },
+
+            portrait: {
+                title: "Portrait Photography",
+                images: [
+                    "photos/portrait-1.jpg",
+                    "photos/portrait-2.jpg",
+                    "photos/portrait-3.jpg"
+                ]
+            },
+
+            lifestyle: {
+                title: "Lifestyle Photography",
+                images: [
+                    "photos/lifestyle-1.jpg",
+                    "photos/lifestyle-2.jpg",
+                    "photos/lifestyle-3.jpg"
+                ]
+            }
+
+        };
+
+
+        let currentGallery = "";
+        let currentGalleryImage = 0;
+
 
         const lightbox = document.getElementById("lightbox");
         const lightboxImage = document.getElementById("lightboxImage");
+        const lightboxTitle = document.getElementById("lightboxTitle");
+        const lightboxCounter = document.getElementById("lightboxCounter");
 
 
-        function openLightbox(index) {
+        function openGallery(category) {
 
-            currentImage = index;
+            currentGallery = category;
+            currentGalleryImage = 0;
 
-            lightboxImage.src = portfolioImages[currentImage];
+            updateGalleryImage();
 
             lightbox.classList.remove("hidden");
             lightbox.classList.add("flex");
 
-            document.body.classList.add("overflow-hidden");
+            document.body.style.overflow = "hidden";
         }
 
 
-        function closeLightbox() {
+        function updateGalleryImage() {
 
-            lightbox.classList.add("hidden");
+            const gallery = galleries[currentGallery];
+
+            if (!gallery) return;
+
+            lightboxImage.src = gallery.images[currentGalleryImage];
+
+            lightboxImage.alt = gallery.title;
+
+            lightboxTitle.textContent = gallery.title;
+
+            lightboxCounter.textContent =
+                `${currentGalleryImage + 1} / ${gallery.images.length}`;
+        }
+
+
+        function closeGallery() {
+
             lightbox.classList.remove("flex");
+            lightbox.classList.add("hidden");
 
-            document.body.classList.remove("overflow-hidden");
+            document.body.style.overflow = "";
         }
 
 
-        function nextImage() {
+        function nextGalleryImage() {
 
-            currentImage =
-                (currentImage + 1) % portfolioImages.length;
+            const gallery = galleries[currentGallery];
 
-            lightboxImage.src = portfolioImages[currentImage];
+            currentGalleryImage =
+                (currentGalleryImage + 1) % gallery.images.length;
+
+            updateGalleryImage();
         }
 
 
-        function previousImage() {
+        function previousGalleryImage() {
 
-            currentImage =
-                (currentImage - 1 + portfolioImages.length)
-                % portfolioImages.length;
+            const gallery = galleries[currentGallery];
 
-            lightboxImage.src = portfolioImages[currentImage];
+            currentGalleryImage =
+                (currentGalleryImage - 1 + gallery.images.length)
+                % gallery.images.length;
+
+            updateGalleryImage();
         }
 
 
-        // Close with ESC
-        document.addEventListener("keydown", (event) => {
+        // Close when clicking the dark background
+        lightbox.addEventListener("click", function (event) {
+
+            if (event.target === lightbox) {
+                closeGallery();
+            }
+
+        });
+
+
+        // Keyboard controls
+        document.addEventListener("keydown", function (event) {
+
+            if (lightbox.classList.contains("hidden")) {
+                return;
+            }
 
             if (event.key === "Escape") {
-                closeLightbox();
+                closeGallery();
             }
 
             if (event.key === "ArrowRight") {
-                nextImage();
+                nextGalleryImage();
             }
 
             if (event.key === "ArrowLeft") {
-                previousImage();
+                previousGalleryImage();
             }
 
         });
@@ -1268,8 +1622,18 @@
 
         const portfolioSwiper = new Swiper(".portfolioSwiper", {
 
-            slidesPerView: 1,
+            loop: true,
+
+            speed: 700,
+
             spaceBetween: 20,
+
+            slidesPerView: 1,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
 
             navigation: {
                 nextEl: ".portfolio-next",
