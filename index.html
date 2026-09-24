@@ -67,7 +67,7 @@
     <!-- NavBar -->
     <nav 
         id="navbar"
-        class="sticky top-0 z-50 w-full px-4 py-4 sm:px-6 md:px-8 lg:px-12 bg-black/30 backdrop-blur-md"
+        class="fixed top-0 z-50 w-full px-4 py-4 sm:px-6 md:px-8 lg:px-12 bg-black/30 backdrop-blur-md"
     >
             
         <!-- Desktop Menu -->
@@ -127,13 +127,10 @@
                     </a>
                 </div>
             </div>
-
-            
-        
             
     </nav>
+    
     <main class="w-full min-h-screen overflow-hidden bg-black/85">
-        
 
         <!-- Hero Section -->
         <section class="relative overflow-hidden" id="home" >
@@ -1485,7 +1482,7 @@
         window.addEventListener("scroll", () => {
             const contactTop = contactSection.offsetTop;
 
-            if (window.scrollY >= contactTop) {
+            if (window.scrollY >= contactTop - 50) {
                 navbar.classList.add("-translate-y-full", "opacity-0");
                 navbar.classList.remove("translate-y-0", "opacity-100");
             } else {
