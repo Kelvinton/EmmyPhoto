@@ -64,11 +64,13 @@
     style="background-image: url('photos/alexander-dummer-aS4Duj2j7r4-unsplash.jpg');"
     class="w-full min-h-screen overflow-x-hidden font-sans text-white bg-fixed bg-center bg-no-repeat bg-cover"
 >
-    <main class="w-full min-h-screen overflow-hidden bg-black/85">
-        <!-- NavBar -->
-        <nav class="sticky top-0 z-50 w-full px-4 py-4 sm:px-6 md:px-8 lg:px-12 bg-black/30 backdrop-blur-md">
+    <!-- NavBar -->
+    <nav 
+        id="navbar"
+        class="sticky top-0 z-50 w-full px-4 py-4 sm:px-6 md:px-8 lg:px-12 bg-black/30 backdrop-blur-md"
+    >
             
-            <!-- Desktop Menu -->
+        <!-- Desktop Menu -->
             <div class="flex items-center justify-between w-full mx-auto text-base max-w-7xl">
                 <div class="flex items-center gap-2">
                     <a href="#home">
@@ -129,7 +131,9 @@
             
         
             
-        </nav>
+    </nav>
+    <main class="w-full min-h-screen overflow-hidden bg-black/85">
+        
 
         <!-- Hero Section -->
         <section class="relative overflow-hidden" id="home" >
@@ -1236,7 +1240,7 @@
 
     </main>
     
-    <footer class="bg-black border-t border-white/10">
+    <footer class="bg-black border-t border-white/10" id="footer">
 
         <!-- Main Footer -->
         <div class="px-5 mx-auto py-14 max-w-7xl sm:px-6 sm:py-16 lg:px-12">
@@ -1475,6 +1479,21 @@
     
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
+        const navbar = document.getElementById("navbar");
+        const contactSection = document.getElementById("contact");
+
+        window.addEventListener("scroll", () => {
+            const contactTop = contactSection.offsetTop;
+
+            if (window.scrollY >= contactTop) {
+                navbar.classList.add("-translate-y-full", "opacity-0");
+                navbar.classList.remove("translate-y-0", "opacity-100");
+            } else {
+                navbar.classList.remove("-translate-y-full", "opacity-0");
+                navbar.classList.add("translate-y-0", "opacity-100");
+            }
+        });
+        
         const menuToggle = document.getElementById("menu-toggle");
         const mobileMenu = document.getElementById("mobile-menu");
         const menuIcon = menuToggle.querySelector("i");
