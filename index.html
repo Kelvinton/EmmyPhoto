@@ -14,34 +14,77 @@
     
     <title>Emmy | Story Behind the Lens | Lagos  Photographer </title>
     <style>
+
         @keyframes fadeIn {
             from {
-                opacity: 0; 
-                transform:translateY(10px);
+                opacity: 0;
+                transform: translateY(10px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
-
             }
         }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-width: 320px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        button,
+        a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        @media (max-width: 640px) {
+
+            h1,
+            h2,
+            h3 {
+                word-break: normal;
+            }
+
+            .swiper-slide {
+                min-width: 0;
+            }
+
+        }
+
     </style>
 </head>
 <body 
-    style="background-image: url(photos/alexander-dummer-aS4Duj2j7r4-unsplash.jpg);" 
-    class="object-cover w-full h-full font-sans text-white bg-no-repeat bg-cover ">
-    <main class="bg-black/85"> 
+    style="background-image: url('photos/alexander-dummer-aS4Duj2j7r4-unsplash.jpg');"
+    class="w-full min-h-screen overflow-x-hidden font-sans text-white bg-fixed bg-center bg-no-repeat bg-cover"
+>
+    <main class="w-full min-h-screen overflow-hidden bg-black/85">
         <!-- NavBar -->
-        <nav class="sticky top-0 z-50 px-12 py-5 bg-black/30 backdrop-blur-md">
+        <nav class="sticky top-0 z-50 w-full px-4 py-4 sm:px-6 md:px-8 lg:px-12 bg-black/30 backdrop-blur-md">
             
             <!-- Desktop Menu -->
-            <div class="flex items-center justify-between mx-auto text-base max-w-7xl">
-                <div class="flex items-center gap-1">
-                    <a href="#home"><img src="photos/public-domain-vectors-m1UovLhQKR0-unsplash.jpg" alt="Photo logo" class="w-6 h-6 rounded-2xl"></a>
-                    <a href="#home" class="text-lg font-bold">Emmy<span class="text-amber-500/70">Photo</span></a>
+            <div class="flex items-center justify-between w-full mx-auto text-base max-w-7xl">
+                <div class="flex items-center gap-2">
+                    <a href="#home">
+                        <img
+                            src="photos/public-domain-vectors-m1UovLhQKR0-unsplash.jpg"
+                            alt="Photo logo"
+                            class="object-cover rounded-full w-7 h-7"
+                        >
+                    </a>
+
+                    <a href="#home" class="text-base font-bold sm:text-lg">
+                        Emmy<span class="text-amber-500/70">Photo</span>
+                    </a>
                 </div>
                 
-                <div class="items-center hidden gap-8 text-base md:flex">
+                <div class="items-center hidden gap-8 lg:flex">
                     <a href="#home" class="px-4 py-2 font-medium transition-colors hover:text-amber-500 ">Home</a>
                     <a href="#about" class="px-4 py-2 font-medium transition-colors hover:text-amber-500 ">About</a>
                     <a href="#service" class="px-4 py-2 font-medium transition-colors hover:text-amber-500 ">Services</a>
@@ -58,7 +101,7 @@
                 <!-- Menu Toggle -->
                 
                 <button id="menu-toggle"
-                 class="text-3xl text-white md:hidden"
+                 class="text-3xl text-white lg:hidden"
                  aria-label="Toggle menu">
                     <i class="fa-solid fa-bars"></i>
                 </button>
@@ -66,15 +109,17 @@
             </div>
 
             <!-- Mobile View -->
-            <div id="mobile-menu" 
-                class="hidden py-6 mt-4 text-center border-t border-white/10 bg-black/95 backdrop-blur-md md:hidden">
-                <div class="flex flex-col items-center gap-6 px-4 py-2 text-lg ">
-                    <a href="#home" class="w-full px-3 py-2 font-medium rounded hover:bg-slate-300/20">Home</a>
-                    <a href="#about" class="w-full px-3 py-2 font-medium rounded hover:bg-slate-300/20">About</a>
-                    <a href="#service" class="w-full px-3 py-2 font-medium rounded hover:bg-slate-300/20">Services</a>
-                     <a href="#contact" class="w-full px-3 py-2 font-medium rounded hover:bg-slate-300/20">Portfolio</a>
-                    <a href="#Testimonial" class="w-full px-3 py-2 font-medium rounded hover:bg-slate-300/20">Testimonial</a>
-                    <a href="#contact" class="w-full px-3 py-2 font-medium rounded hover:bg-slate-300/20">Contact</a>
+            <div
+                id="mobile-menu"
+                class="hidden w-full py-6 mt-4 text-center border-t border-white/10 bg-black/95 backdrop-blur-md lg:hidden"
+            >
+                <div class="flex flex-col items-center gap-3 px-2 py-2 text-base sm:text-lg">
+                    <a href="#home" class="w-full px-3 py-3 font-medium rounded-lg hover:bg-white/10">Home</a>
+                    <a href="#about" class="w-full px-3 py-3 font-medium rounded-lg hover:bg-white/10">About</a>
+                    <a href="#service" class="w-full px-3 py-3 font-medium rounded-lg hover:bg-white/10">Services</a>
+                     <a href="#portfolio" class="w-full px-3 py-3 font-medium rounded-lg hover:bg-white/10">Portfolio</a>
+                    <a href="#Testimonial" class="w-full px-3 py-3 font-medium rounded-lg hover:bg-white/10">Testimonial</a>
+                    <a href="#contact" class="w-full px-3 py-3 font-medium rounded-lg hover:bg-white/10">Contact</a>
                     <a href="Emmybooking form.html" 
                         class="w-full px-8 py-3 mt-4 font-semibold text-center rounded-2xl bg-amber-600 hover:bg-amber-500">Book a Session
                     </a>
@@ -88,42 +133,51 @@
 
         <!-- Hero Section -->
         <section class="relative overflow-hidden" id="home" >
-            <div class="flex flex-col items-center justify-center gap-16 px-6 py-20 mx-auto md:flex-row md:py-24 lg:px-16 max-w-8xl" >
+            <div class="flex flex-col items-center justify-center gap-10 px-5 py-16 mx-auto sm:px-6 sm:py-20 md:flex-row md:gap-12 md:py-24 lg:gap-20 lg:px-12 xl:px-10 max-w-7xl">
                 <!-- left Content -->
                 <div class="max-w-3xl text-center md:text-left">
-                    <h1 class="mb-6 font-serif text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">Capturing Timeless<br>Moments.</h1>
-                    <p class="max-w-md mx-auto text-lg leading-relaxed text-gray-300 md:text-xl md:mx-0">Elegant photography crafted to preserve emotions, stories, and unforgettable experiences.</p>
-                    <div 
-                        class="flex flex-col justify-center gap-4 mt-10 sm:flex-row md:justify-start">
-                        <a href="#contact"
-                        class="px-8 py-4 text-lg font-semibold transition-all duration-300 shadow-lg rounded-2xl bg-amber-600 hover:bg-amber-500 shadow-amber-600/30">Book a Session</a>
-                        
-                        <a href="#about" 
-                        class="px-8 py-4 text-lg font-medium transition-all duration-300 border border-white/40 hover:border-white/70 rounded-2xl ">Learn More <i class="mx-2 fa-solid fa-arrow-right-long"></i></a>
-                        
+                    <h1 class="mb-5 font-serif text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl">Capturing Timeless<br>Moments.</h1>
+                    <p class="max-w-md mx-auto text-base leading-relaxed text-gray-300 sm:text-lg md:text-xl md:mx-0">Elegant photography crafted to preserve emotions, stories, and unforgettable experiences.</p>
+                    <div class="flex flex-col justify-center w-full gap-3 mt-8 sm:flex-row md:justify-start sm:w-auto">
+    
+                        <a
+                            href="#contact"
+                            class="w-full px-6 py-3.5 text-base font-semibold text-center transition-all duration-300 shadow-lg sm:w-auto sm:px-8 sm:py-4 sm:text-lg rounded-2xl bg-amber-600 hover:bg-amber-500 shadow-amber-600/30"
+                        >
+                            Book a Session
+                        </a>
+
+                        <a
+                            href="#about"
+                            class="w-full px-6 py-3.5 text-base font-medium text-center transition-all duration-300 border sm:w-auto sm:px-8 sm:py-4 sm:text-lg border-white/40 hover:border-white/70 rounded-2xl"
+                        >
+                            Learn More
+                            <i class="mx-2 fa-solid fa-arrow-right-long"></i>
+                        </a>
+
                     </div>
                 </div>
                 
                 <div class="relative">
                     <img src="photos/emmy photo.jpeg" alt="EmmyPhoto - Timeless Wedding & Protrait Photography" 
-                    class="border shadow-2xl border-white/10 rounded-3xl max-w-[420px] h-[500px] w-full object-cover shadow-black/50 ">
+                    class="w-full max-w-[360px] sm:max-w-[400px] md:max-w-[420px] h-[380px] sm:h-[450px] md:h-[500px] object-cover border border-white/10 rounded-3xl shadow-2xl shadow-black/50">
                 </div>
             </div>
         </section>
 
         <!-- About Section -->
-        <section id="about" class="py-20 ">
-            <div class="px-6 mx-auto max-w-7xl lg:px-16">
+        <section id="about" class="px-5 py-16 sm:px-6 sm:py-20 md:py-24">
+            <div class="w-full mx-auto max-w-7xl lg:px-12 xl:px-16">
                 <div class="flex flex-col-reverse items-center justify-center gap-16 md:gap-20 md:flex-row" >
                     <!-- Image -->
                     <div class="flex-shrink-0">
                         <img src="photos/About Cam.jpg" alt="- EmmyPhoto"
-                         class="object-cover w-full transition duration-500 border shadow-2xl border-white/20 rounded-3xl bg-slate-100 hover:scale-105 max-w-[420px] h-[420px] transform ">
+                        class="object-cover w-full max-w-[360px] sm:max-w-[400px] md:max-w-[420px] h-[360px] sm:h-[400px] md:h-[420px] transition duration-500 border shadow-2xl border-white/20 rounded-3xl bg-slate-100 hover:scale-105">
                     </div>
                     
                     <!-- Content -->
                     <div class="max-w-xl text-center md:text-left">
-                        <h2 class="mb-8 font-serif text-4xl font-bold leading-tight text-white md:text-5xl">Story behind the lens</h2>
+                        <h2 class="mb-6 font-serif text-3xl font-bold leading-tight text-white sm:text-4xl md:mb-8 md:text-5xl">Story behind the lens</h2>
                         
                         <div class="space-y-6 text-lg leading-relaxed text-gray-300 " >
                             
@@ -176,32 +230,32 @@
         </section>
 
         <!-- Services Section -->
-        <section class="py-20 px-14" id="service">
+        <section class="px-5 py-16 sm:px-6 sm:py-20 lg:px-12 xl:px-16" id="service">
             <div class="mx-auto max-w-7xl" >
                 <div class="mb-16 text-center">
-                    <h2 class="font-serif text-5xl">Crafting Stories Through Every Frame</h2>
-                    <p class="mx-auto mt-4 text-slate-300 max-2xl">From intimate celebration to timeless protraits...</p>
+                    <h2 class="font-serif text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">Crafting Stories Through Every Frame</h2>
+                    <p class="max-w-2xl mx-auto mt-4 text-base text-slate-300 sm:text-lg">From intimate celebration to timeless protraits...</p>
                     
                 </div>
                 
                 <div class="grid gap-8 md:grid-cols-2">
                     <!-- Card 1 -->
                     <!-- Wedding Stories -->
-                    <div class="mx-5 overflow-hidden transition duration-500 bg-black border border-white/10 rounded-3xl hover:-translate-y-2">
-                        <div class="overflow-hidden swipper protraitSwiper">
+                    <div class="w-full overflow-hidden transition duration-500 bg-black border border-white/10 rounded-3xl hover:-translate-y-2">
+                        <div class="overflow-hidden swiper protraitSwiper">
                             <div class="swiper-wrapper">
                                 <!-- Image 1 -->
                                 <div class="swiper-slide">
-                                    <img src="photos/wedding-1.jpg" alt="" class="object-cover w-full h-[300px]">
+                                    <img src="photos/wedding-1.jpg" alt="" class="object-cover w-full h-[240px] sm:h-[280px] md:h-[300px]">
                                 </div>
                                 
                                 <!-- image 2 -->
                                 <div class="swiper-slide">
-                                    <img src="photos/luwadlin-bosman-P_HRPYpFTNA-unsplash.jpg" alt="" class="object-cover w-full h-[300px]">
+                                    <img src="photos/luwadlin-bosman-P_HRPYpFTNA-unsplash.jpg" alt="" class="object-cover w-full h-[240px] sm:h-[280px] md:h-[300px]">
                                 </div>
                                 
                                 <div class="swiper-slide">
-                                    <img src="photos/sandy-millar-8vaQKYnawHw-unsplash.jpg" alt="" class="object-cover w-full h-[300px]">
+                                    <img src="photos/sandy-millar-8vaQKYnawHw-unsplash.jpg" alt="" class="object-cover w-full h-[240px] sm:h-[280px] md:h-[300px]">
                                 </div>
                                 
                                 
@@ -217,7 +271,7 @@
                         <div class="border-none ">
                             <el-dropdown >
                                 <button class="inline-flex justify-center w-full px-3 py-4 text-sm font-semibold text-white rounded-md shadow-xs gap-x-1 bg-black/20 inset-ring-0 inset-ring-gray-300 hover:bg-black/20">
-                                    Learn More
+                                    Offer Include
                                     <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="-mr-1 text-gray-400 size-5">
                                     <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
                                     </svg>
@@ -239,29 +293,29 @@
                     
                     <!-- Card 2 -->
                     <!-- Protraits -->
-                    <div class="mx-5 overflow-hidden transition duration-500 bg-black border border-white/10 rounded-3xl hover:-translate-y-2">
+                    <div class="w-full overflow-hidden transition duration-500 bg-black border border-white/10 rounded-3xl hover:-translate-y-2">
                         <div class="overflow-hidden swipper protraitSwiper">
                             <div class="swiper-wrapper">
                                 <!-- Image 1 -->
                                 <div class="swiper-slide">
-                                    <img src="photos/DSC_0165.JPG" alt="" class="object-cover w-full h-[300px]">
+                                    <img src="photos/DSC_0165.JPG" alt="" class="object-cover w-full h-[240px] sm:h-[280px] md:h-[300px]">
                                 </div>
                                 
                                 <!-- image 2 -->
                                 <div class="swiper-slide">
-                                    <img src="photos/william-thomas-ny6tO4ItOEY-unsplash (1) (1).jpg" alt="" class="object-cover w-full h-[300px]">
+                                    <img src="photos/william-thomas-ny6tO4ItOEY-unsplash (1) (1).jpg" alt="" class="object-cover w-full h-[240px] sm:h-[280px] md:h-[300px]">
                                 </div>
                                 
                                 <div class="swiper-slide">
-                                    <img src="photos/stefan-stefancik-QXevDflbl8A-unsplash.jpg" alt="" class="object-cover w-full h-[300px]">
+                                    <img src="photos/stefan-stefancik-QXevDflbl8A-unsplash.jpg" alt="" class="object-cover w-full h-[240px] sm:h-[280px] md:h-[300px]">
                                 </div>
                                 
                                 <div class="swiper-slide">
-                                    <img src="photos/pic.JPG" alt="" class="object-cover w-full h-[300px]">
+                                    <img src="photos/pic.JPG" alt="" class="object-cover w-full h-[240px] sm:h-[280px] md:h-[300px]">
                                 </div> 
                                 
                                 <div class="swiper-slide">
-                                    <img src="photos/WhatsApp Image 2026-05-19 at 15.18.03.jpeg" alt="" class="object-cover w-full h-[300px]">
+                                    <img src="photos/WhatsApp Image 2026-05-19 at 15.18.03.jpeg" alt="" class="object-cover w-full h-[240px] sm:h-[280px] md:h-[300px]">
                                 </div> 
                                 
                             </div>
@@ -276,7 +330,7 @@
                         <div class="mb-4 border-none ">
                             <el-dropdown >
                             <button class="inline-flex justify-center w-full px-3 py-4 text-sm font-semibold text-white rounded-md shadow-xs gap-x-1 bg-black/20 inset-ring-0 inset-ring-gray-300 hover:bg-black/20">
-                                Learn More
+                                Offer Include
                                 <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="-mr-1 text-gray-400 size-5">
                                 <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
                                 </svg>
@@ -298,27 +352,27 @@
 
                     <!-- Card 3 -->
                     <!-- Birthdays & Anniversaries -->
-                    <div class="mx-5 overflow-hidden transition duration-500 bg-black border border-white/10 rounded-3xl hover:-translate-y-2">
+                    <div class="w-full overflow-hidden transition duration-500 bg-black border border-white/10 rounded-3xl hover:-translate-y-2">
                         <div class="overflow-hidden swipper protraitSwiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <img src="photos/Birthday-1.jpg" alt="" class="object-cover w-full h-[300px]">
+                                    <img src="photos/Birthday-1.jpg" alt="" class="object-cover w-full h-[240px] sm:h-[280px] md:h-[300px]">
                                 </div>
 
                                 <div class="swiper-slide">
-                                    <img src="photos/Birthday-2.jpg" alt="" class="object-cover w-full h-[300px]">
+                                    <img src="photos/Birthday-2.jpg" alt="" class="object-cover w-full h-[240px] sm:h-[280px] md:h-[300px]">
                                 </div>
 
                                 <div class="swiper-slide">
-                                    <img src="photos/2025_07_13_17_32_IMG_3114.jpg" alt="" class="object-cover w-full h-[300px]">
+                                    <img src="photos/2025_07_13_17_32_IMG_3114.jpg" alt="" class="object-cover w-full h-[240px] sm:h-[280px] md:h-[300px]">
                                 </div>
 
                                 <div class="swiper-slide">
-                                    <img src="photos/Birthday-3.jpg" alt="" class="object-cover w-full h-[300px]">
+                                    <img src="photos/Birthday-3.jpg" alt="" class="object-cover w-full h-[240px] sm:h-[280px] md:h-[300px]">
                                 </div>
 
                                 <div class="swiper-slide">
-                                    <img src="photos/Birthday-4.jpg" alt="" class="object-cover w-full h-[300px]">
+                                    <img src="photos/Birthday-4.jpg" alt="" class="object-cover w-full h-[240px] sm:h-[280px] md:h-[300px]">
                                 </div>
 
                             </div>
@@ -334,7 +388,7 @@
                         <div class="border-none ">
                             <el-dropdown >
                             <button class="inline-flex justify-center w-full px-3 py-4 text-sm font-semibold text-white rounded-md shadow-xs gap-x-6 bg-black/20 inset-ring-0 inset-ring-gray-300 hover:bg-black/20">
-                                Learn More
+                                Offer Include
                                 <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="-mr-1 text-gray-400 size-5">
                                 <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
                                 </svg>
@@ -356,27 +410,27 @@
 
                     <!-- Card 4 -->
                     <!-- Creative Shots -->
-                    <div class="mx-5 overflow-hidden transition duration-500 bg-black border border-white/10 rounded-3xl hover:-translate-y-2 ">
+                    <div class="w-full overflow-hidden transition duration-500 bg-black border border-white/10 rounded-3xl hover:-translate-y-2">
                         <div class="overflow-hidden swipper protraitSwiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <img src="photos/Creative-1.JPG" alt="" class="object-cover w-full h-[300px]">
+                                    <img src="photos/Creative-1.JPG" alt="" class="object-cover w-full h-[240px] sm:h-[280px] md:h-[300px]">
                                 </div>
 
                                 <div class="swiper-slide">
-                                    <img src="photos/Creative-2.jpg" alt="" class="object-cover w-full h-[300px]">
+                                    <img src="photos/Creative-2.jpg" alt="" class="object-cover w-full h-[240px] sm:h-[280px] md:h-[300px]">
                                 </div>
 
                                 <div class="swiper-slide">
-                                    <img src="photos/marsumilae-wTd7D9umpj8-unsplash.jpg" alt="" class="object-cover w-full h-[300px]">
+                                    <img src="photos/marsumilae-wTd7D9umpj8-unsplash.jpg" alt="" class="object-cover w-full h-[240px] sm:h-[280px] md:h-[300px]">
                                 </div>
                                 
                                 <div class="swiper-slide">
-                                    <img src="photos/valentin-ezGP2EB2x0E-unsplash.jpg" alt="" class="object-cover w-full h-[300px]">
+                                    <img src="photos/valentin-ezGP2EB2x0E-unsplash.jpg" alt="" class="object-cover w-full h-[240px] sm:h-[280px] md:h-[300px]">
                                 </div>
                                 
                                 <div class="swiper-slide">
-                                    <img src="photos/christopher-stites-tedtXRcL1AI-unsplash.jpg" alt="" class="object-cover w-full h-[300px]">
+                                    <img src="photos/christopher-stites-tedtXRcL1AI-unsplash.jpg" alt="" class="object-cover w-full h-[240px] sm:h-[280px] md:h-[300px]">
                                 </div>
 
                             </div>
@@ -393,7 +447,7 @@
                         <div class="mb-4 border-none ">
                             <el-dropdown >
                             <button class="inline-flex justify-center w-full px-3 py-4 text-sm font-semibold text-white rounded-md shadow-xs gap-x-6 bg-black/20 inset-ring-0 inset-ring-gray-300 hover:bg-black/20">
-                                Learn More
+                                Offer Include
                                 <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="-mr-1 text-gray-400 size-5">
                                 <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
                                 </svg>
@@ -420,7 +474,10 @@
         </section>
  
         <!-- Portfolio carousel Section-->
-        <section id="portfolio" class="px-4 py-20 bg-black sm:px-6 lg:px-16">
+        <section
+            id="portfolio"
+            class="px-4 py-16 bg-black sm:px-6 sm:py-20 lg:px-12 xl:px-16"
+        >
 
             <div class="mx-auto max-w-7xl">
 
@@ -430,7 +487,7 @@
                         My Work
                     </p>
 
-                    <h2 class="mt-3 text-4xl font-bold sm:text-5xl">
+                    <h2 class="mt-3 text-3xl font-bold sm:text-4xl md:text-5xl">
                         Selected Portfolio
                     </h2>
 
@@ -458,7 +515,7 @@
                                     <img
                                         src="photos/wedding-1.jpg"
                                         alt="Wedding photography"
-                                        class="object-cover w-full h-[420px] transition duration-500 group-hover:scale-105"
+                                        class="object-cover w-full h-[360px] sm:h-[400px] md:h-[420px] transition duration-500 group-hover:scale-105"
                                     >
 
                                     <div class="absolute inset-0 flex items-end p-6 bg-gradient-to-t from-black/80 via-transparent to-transparent">
@@ -486,7 +543,7 @@
                                     <img
                                         src="photos/stefan-stefancik-QXevDflbl8A-unsplash.jpg"
                                         alt="Portrait photography"
-                                        class="object-cover w-full h-[420px] transition duration-500 group-hover:scale-105"
+                                        class="object-cover w-full h-[360px] sm:h-[400px] md:h-[420px] transition duration-500 group-hover:scale-105"
                                     >
 
                                     <div class="absolute inset-0 flex items-end p-6 bg-gradient-to-t from-black/80 via-transparent to-transparent">
@@ -514,7 +571,7 @@
                                     <img
                                         src="photos/Birthday-4.jpg"
                                         alt="Birthday photography"
-                                        class="object-cover w-full h-[420px] transition duration-500 group-hover:scale-105"
+                                        class="object-cover w-full h-[360px] sm:h-[400px] md:h-[420px] transition duration-500 group-hover:scale-105"
                                     >
 
                                     <div class="absolute inset-0 flex items-end p-6 bg-gradient-to-t from-black/80 via-transparent to-transparent">
@@ -542,7 +599,7 @@
                                     <img
                                         src="photos/christopher-stites-tedtXRcL1AI-unsplash.jpg"
                                         alt="Lifestyle photography"
-                                        class="object-cover w-full h-[420px] transition duration-500 group-hover:scale-105"
+                                        class="object-cover w-full h-[360px] sm:h-[400px] md:h-[420px] transition duration-500 group-hover:scale-105"
                                     >
 
                                     <div class="absolute inset-0 flex items-end p-6 bg-gradient-to-t from-black/80 via-transparent to-transparent">
@@ -567,14 +624,14 @@
                     <!-- Main carousel navigation -->
                     <button
                         type="button"
-                        class="absolute z-10 flex items-center justify-center w-10 h-10 text-white -translate-y-1/2 rounded-full portfolio-prev left-2 top-1/2 bg-black/70 backdrop-blur hover:bg-amber-500"
+                        class="absolute z-10 flex items-center justify-center text-white -translate-y-1/2 rounded-full w-9 h-9 sm:w-10 sm:h-10 portfolio-prev left-2 sm:left-3 top-1/2 bg-black/70 backdrop-blur hover:bg-amber-500"
                     >
                         <i class="fa-solid fa-chevron-left"></i>
                     </button>
 
                     <button
                         type="button"
-                        class="absolute z-10 flex items-center justify-center w-10 h-10 text-white -translate-y-1/2 rounded-full portfolio-next right-2 top-1/2 bg-black/70 backdrop-blur hover:bg-amber-500"
+                        class="absolute z-10 flex items-center justify-center text-white -translate-y-1/2 rounded-full w-9 h-9 sm:w-10 sm:h-10 portfolio-next right-2 sm:right-3 top-1/2 bg-black/70 backdrop-blur hover:bg-amber-500"
                     >
                         <i class="fa-solid fa-chevron-right"></i>
                     </button>
@@ -593,9 +650,9 @@
         </section>
 
         <div
-                id="lightbox"
-                class="fixed inset-0 z-50 items-center justify-center hidden p-4 bg-black/95"
-            >
+        id="lightbox"
+        class="fixed inset-0 z-50 items-center justify-center hidden p-4 bg-black/95"
+        >
 
                 <!-- Close -->
                 <button
@@ -611,7 +668,7 @@
                 <button
                     type="button"
                     onclick="previousGalleryImage()"
-                    class="absolute z-50 flex items-center justify-center w-12 h-12 text-white -translate-y-1/2 rounded-full left-4 top-1/2 bg-white/10 hover:bg-amber-500"
+                    class="absolute z-50 flex items-center justify-center w-10 h-10 text-white -translate-y-1/2 rounded-full left-2 sm:left-4 top-1/2 bg-white/10 hover:bg-amber-500"
                 >
                     <i class="fa-solid fa-chevron-left"></i>
                 </button>
@@ -624,7 +681,7 @@
                         id="lightboxImage"
                         src=""
                         alt=""
-                        class="max-h-[75vh] max-w-[90vw] rounded-lg object-contain"
+                        class="max-h-[70vh] max-w-[82vw] sm:max-w-[88vw] rounded-lg object-contain"
                     >
 
                     <p
@@ -644,7 +701,7 @@
                 <button
                     type="button"
                     onclick="nextGalleryImage()"
-                    class="absolute z-50 flex items-center justify-center w-12 h-12 text-white -translate-y-1/2 rounded-full right-4 top-1/2 bg-white/10 hover:bg-amber-500"
+                    class="absolute z-50 flex items-center justify-center w-10 h-10 text-white -translate-y-1/2 rounded-full right-2 sm:right-4 top-1/2 bg-white/10 hover:bg-amber-500"
                 >
                     <i class="fa-solid fa-chevron-right"></i>
                 </button>
@@ -652,9 +709,12 @@
         </div>
         
         <!-- Testimonial Section -->
-        <section class="py-20 section_container client_container px-14" id="Testimonial">
+        <section
+            class="px-5 py-16 sm:px-6 sm:py-20 lg:px-12 xl:px-16"
+            id="Testimonial"
+        >
             <div class="w-full mx-auto text-center max-w-7xl client_content rounded-2xl lg:px-18">
-                <h2 class="font-serif text-5xl font-bold text-center">Kind Words From Our Clients</h2>
+                <h2 class="font-serif text-3xl font-bold text-center sm:text-4xl md:text-5xl">Kind Words From Our Clients</h2>
                 <p class="max-w-3xl mx-auto mt-6 text-lg leading-8 text-gray-400">
 
                     Every photograph tells a story, but our clients tell
@@ -665,20 +725,20 @@
                 </p>
 
                 <!-- Slider main container -->
-                <div class="w-full mt-10 swiper">
+                <div class="w-full mt-10 testimonialSwiper swiper">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         
                         <!-- Slides -->
                         <!-- Slide 1   -->
                         <div class="flex h-auto swiper-slide">
-                            <div class="flex flex-col items-center h-full max-w-2xl gap-10 p-8 mx-auto border client_card md:flex-row rounded-3xl border-white/10 bg-white/5 backdrop-blur-lg md:p-10">
+                            <div class="flex flex-col items-center w-full h-full max-w-2xl gap-6 p-5 mx-auto border client_card sm:p-6 md:flex-row md:gap-8 md:p-10 rounded-3xl border-white/10 bg-white/5 backdrop-blur-lg">
                                 
                                 <!-- Client Image -->
                                <img
-                                    src="photos/WhatsApp Image 2026-05-19 at 15.18.03.jpeg"
-                                    alt="Sarah & Daniel"
-                                    class="flex-shrink-0 object-cover w-64 h-80 rounded-2xl"
+                                    src="photos/user/user-0.jpg"
+                                    alt="Sarah & Daniel Okoro"
+                                    class="flex-shrink-0 object-cover w-40 h-48 sm:w-48 sm:h-60 md:w-64 md:h-80 rounded-2xl"
                                 >
 
                                 <!-- Client Review -->
@@ -695,7 +755,7 @@
 
                                     </div>
                                 
-                                    <p class="min-h-[170px] text-lg italic leading-7 text-gray-300">
+                                    <p class="text-base italic leading-7 text-gray-300 sm:text-lg">
 
                                         "EmmyPhoto didn't just capture our wedding;
                                         they captured every emotion we felt throughout
@@ -706,7 +766,7 @@
                                     </p>
 
                                     <h4 class="mt-8 text-2xl font-semibold">
-                                        Sarah & Daniel
+                                        Sarah & Daniel Okoro
                                     </h4>
 
                                     <p class="text-amber-400">
@@ -719,10 +779,10 @@
                         <!-- Slide 2 -->
                         <div class="flex h-auto swiper-slide">
                             
-                            <div class="flex flex-col items-center h-full max-w-2xl gap-10 p-8 mx-auto border client_card md:flex-row rounded-3xl border-white/10 bg-white/5 backdrop-blur-lg md:p-10">
+                            <div class="flex flex-col items-center w-full h-full max-w-2xl gap-6 p-5 mx-auto border client_card sm:p-6 md:flex-row md:gap-8 md:p-10 rounded-3xl border-white/10 bg-white/5 backdrop-blur-lg">
                                 
                                 <!-- Client Image -->
-                                <img src="photos/user-2.jpg" alt="Grace A." class="flex-shrink-0 object-cover w-64 h-80 rounded-2xl">
+                                <img src="photos/user/user-1.jpg" alt="Grace A." class="flex-shrink-0 object-cover w-40 h-48 sm:w-48 sm:h-60 md:w-64 md:h-80 rounded-2xl">
                                 
                                 <!-- Client Review -->
                                 <div class="flex flex-col justify-between flex-1 text-center md:text-left">
@@ -738,7 +798,7 @@
 
                                     </div>
                                     
-                                    <p class="min-h-[170px] text-lg italic leading-7 text-gray-300">
+                                    <p class="text-base italic leading-7 text-gray-300 sm:text-lg">
                                         "I'm usually uncomfortable in front of the camera, but EmmyPhoto made the entire experience effortless. The photos felt natural, elegant, and truly reflected who I am."
                                     </p>
                                     <h4 class="mt-8 text-2xl font-semibold">Grace A.</h4>
@@ -750,10 +810,10 @@
 
                         <!-- Slide 3 -->
                         <div class="flex h-auto swiper-slide">
-                            <div class="flex flex-col items-center h-full max-w-2xl gap-10 p-8 mx-auto border client_card md:flex-row rounded-3xl border-white/10 bg-white/5 backdrop-blur-lg md:p-10">
+                            <div class="flex flex-col items-center w-full h-full max-w-2xl gap-6 p-5 mx-auto border client_card sm:p-6 md:flex-row md:gap-8 md:p-10 rounded-3xl border-white/10 bg-white/5 backdrop-blur-lg">
                                 
                                 <!-- Client Image -->
-                                <img src="photos/user-3.jpg" alt="user" class="flex-shrink-0 object-cover w-64 h-80 rounded-2xl">
+                                <img src="photos/user/user-2.jpg" alt="user" class="flex-shrink-0 object-cover w-40 h-48 sm:w-48 sm:h-60 md:w-64 md:h-80 rounded-2xl">
                                 
                                 <!-- Client Review -->
                                 <div class="flex flex-col justify-between flex-1 text-center md:text-left">
@@ -769,12 +829,10 @@
 
                                     </div>
                                     
-                                    <p class="min-h-[170px] text-lg italic leading-7 text-gray-300">
+                                    <p class="text-base italic leading-7 text-gray-300 sm:text-lg">
                                         "Every important moment was beautifully documented without ever feeling staged. The attention to detail and ability to capture genuine laughter made the memories even more special."
                                     </p>
-                                    <h4 class="mt-8 text-2xl font-semibold">Micheal O.</h4>
-                                    
-                                    <p class="text-amber-400">Lorem, ipsum dolor.</p>
+                                    <h4 class="mt-5 text-2xl font-semibold">Micheal O.</h4>
                                 </div>
                             </div>
                         </div>
@@ -782,10 +840,10 @@
                         <!-- Slide 4 -->
                         <div class="flex h-auto swiper-slide">
                             
-                            <div class="flex flex-col items-center h-full max-w-2xl gap-10 p-8 mx-auto border client_card md:flex-row rounded-3xl border-white/10 bg-white/5 backdrop-blur-lg md:p-10">
+                            <div class="flex flex-col items-center w-full h-full max-w-2xl gap-6 p-5 mx-auto border client_card sm:p-6 md:flex-row md:gap-8 md:p-10 rounded-3xl border-white/10 bg-white/5 backdrop-blur-lg">
 
                                 <!-- Client Image -->
-                                <img src="photos/user-4.jpg" alt="user" class="flex-shrink-0 object-cover w-64 h-80 rounded-2xl">
+                                <img src="photos/user/user-3.jpg" alt="user" class="flex-shrink-0 object-cover w-40 h-48 sm:w-48 sm:h-60 md:w-64 md:h-80 rounded-2xl">
                                 
                                 <!-- Client Review -->
                                 <div class="flex flex-col justify-between flex-1 text-center md:text-left">
@@ -801,13 +859,13 @@
 
                                     </div>
                                     
-                                    <p class="min-h-[170px] text-lg italic leading-7 text-gray-300">
+                                    <p class="text-base italic leading-7 text-gray-300 sm:text-lg">
                                         "From start to finish, the experience was exceptional. The photographs tell our story so beautifully that we find ourselves looking through them again and again."
                                     </p>
 
-                                    <h4 class="mt-8 text-2xl font-semibold">Sarah & Jacob</h4>
+                                    <h4 class="mt-5 text-2xl font-semibold">Mary</h4>
                                     
-                                    <p class="text-amber-400">Lorem, ipsum.</p>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -815,10 +873,10 @@
                         <!-- Slide 5 -->
                         <div class="flex h-auto swiper-slide">
                             
-                            <div class="flex flex-col items-center h-full max-w-2xl gap-10 p-8 mx-auto border client_card md:flex-row rounded-3xl border-white/10 bg-white/5 backdrop-blur-lg md:p-10">
+                            <div class="flex flex-col items-center w-full h-full max-w-2xl gap-6 p-5 mx-auto border client_card sm:p-6 md:flex-row md:gap-8 md:p-10 rounded-3xl border-white/10 bg-white/5 backdrop-blur-lg">
                                 
                                 <!-- Client Image -->
-                                <img src="photos/marsumilae-wTd7D9umpj8-unsplash.jpg" alt="user" class="flex-shrink-0 object-cover w-64 h-80 rounded-2xl">
+                                <img src="photos/user/user-4.jpg" alt="user" class="flex-shrink-0 object-cover w-40 h-48 sm:w-48 sm:h-60 md:w-64 md:h-80 rounded-2xl">
                                 
                                 <!-- Client Review -->
                                 <div class="flex flex-col justify-between flex-1 text-center md:text-left">
@@ -834,23 +892,23 @@
 
                                     </div>
                                     
-                                    <p class="min-h-[170px] text-lg italic leading-7 text-gray-300">
+                                    <p class="text-base italic leading-7 text-gray-300 sm:text-lg">
                                         "The creativity, professionalism, and calm presence behind the camera made all the difference. Every image felt timeless, authentic, and beautifully composed."
                                     </p>
                                     
-                                    <h4 class="mt-8 text-2xl font-semibold">Sarah & Daniel</h4>
+                                    <h4 class="mt-5 text-2xl font-semibold">Sandra</h4>
                                     
-                                    <p class="text-amber-400">Lorem, ipsum.</p>
+                                    
                                 </div>
                             </div>
                         </div>
 
                         <!-- Slide 6 -->
                         <div class="flex h-auto swiper-slide">
-                            <div class="flex flex-col items-center h-full max-w-2xl gap-10 p-8 mx-auto border client_card md:flex-row rounded-3xl border-white/10 bg-white/5 backdrop-blur-lg md:p-10">
+                            <div class="flex flex-col items-center w-full h-full max-w-2xl gap-6 p-5 mx-auto border client_card sm:p-6 md:flex-row md:gap-8 md:p-10 rounded-3xl border-white/10 bg-white/5 backdrop-blur-lg">
                                 
                                 <!-- Client Image -->
-                                <img src="photos/user-1.jpg" alt="user" class="flex-shrink-0 object-cover w-64 h-80 rounded-2xl">
+                                <img src="photos/user/user-5.jpg" alt="user" class="flex-shrink-0 object-cover w-40 h-48 sm:w-48 sm:h-60 md:w-64 md:h-80 rounded-2xl">
                                 
                                 <!-- Client Review -->
                                 <div class="flex flex-col justify-between flex-1 text-center md:text-left">
@@ -866,12 +924,11 @@
 
                                     </div>
                                     
-                                    <p class="min-h-[170px] text-lg italic leading-7 text-gray-300">
+                                    <p class="text-base italic leading-7 text-gray-300 sm:text-lg">
                                         "The communication was excellent, the delivery was prompt, and the final photographs exceeded every expectation. EmmyPhoto has an incredible eye for capturing moments that matter."
                                     </p>
                                     
-                                    <h4 class="mt-8 text-2xl font-semibold">Sarah & Daniel</h4>
-                                    
+                                    <h4 class="mt-8 text-2xl font-semibold">Mary & Jacob</h4>
                                     <p class="text-amber-400">Anniversary</p>
                                 </div>
                             </div>
@@ -883,13 +940,12 @@
             </div>
 
             <!-- Testimonial Review -->
-            <div class="grid max-w-5xl grid-cols-2 gap-8 p-8 mx-auto mt-20 border md:grid-cols-4 rounded-3xl border-white/10 bg-white/5 backdrop-blur-lg"
-            >
+            <div class="grid max-w-5xl grid-cols-2 gap-5 p-5 mx-auto mt-16 border sm:gap-8 sm:p-8 md:grid-cols-4 rounded-3xl border-white/10 bg-white/5 backdrop-blur-lg">
                 <div class="text-center">
 
-                    <i class="text-5xl fa-regular fa-calendar-check text-amber-500"></i>
+                    <i class="text-4xl fa-regular fa-calendar-check text-amber-500 sm:text-5xl"></i>
 
-                    <h3 class="mt-4 text-4xl font-bold">
+                    <h3 class="mt-3 text-3xl font-bold sm:text-4xl">
                         5+
                     </h3>
 
@@ -901,9 +957,9 @@
 
                 <div class="text-center">
 
-                    <i class="text-5xl fa-solid fa-camera text-amber-500"></i>
+                    <i class="text-4xl fa-solid fa-camera text-amber-500 sm:text-5xl"></i>
 
-                    <h3 class="mt-4 text-4xl font-bold">
+                    <h3 class="mt-3 text-3xl font-bold sm:text-4xl">
                         150+
                     </h3>
 
@@ -915,9 +971,9 @@
 
                 <div class="text-center">
 
-                    <i class="text-5xl fa-regular fa-images text-amber-500"></i>
+                    <i class="text-4xl fa-regular fa-images text-amber-500 sm:text-5xl"></i>
 
-                    <h3 class="mt-4 text-4xl font-bold">
+                    <h3 class="mt-3 text-3xl font-bold sm:text-4xl">
                         3000+
                     </h3>
 
@@ -929,9 +985,9 @@
 
                 <div class="text-center">
 
-                    <i class="text-5xl fa-regular fa-face-smile text-amber-500"></i>
+                    <i class="text-4xl fa-regular fa-face-smile text-amber-500 sm:text-5xl"></i>
 
-                    <h3 class="mt-4 text-4xl font-bold">
+                    <h3 class="mt-3 text-3xl font-bold sm:text-4xl">
                         98%
                     </h3>
 
@@ -947,15 +1003,18 @@
         
         
         <!-- Contact Section -->
-        <section class="min-h-screen px-12 py-20 lg:px-16" id="contact">
+        <section
+            class="min-h-screen px-5 py-16 sm:px-6 sm:py-20 lg:px-12 xl:px-16"
+            id="contact"
+        >
             <div class="mx-auto max-w-7xl">
-                <h1 class="mb-12 text-5xl font-bold md:text-6xl">Get In Touch <hr class="w-40 mt-3 border-amber-600 "></h1>
+                <h1 class="mb-10 text-4xl font-bold sm:text-5xl md:mb-12 md:text-6xl">Get In Touch <hr class="w-40 mt-3 border-amber-600 "></h1>
 
-                <div class="grid items-start grid-cols-1 gap-16 lg:grid-cols-2">
+                <div class="grid items-start grid-cols-1 gap-10 md:gap-12 lg:grid-cols-2 lg:gap-16">
                     <!-- left side Contact Info-->
                     <div class="space-y-10 ">
                         <div>
-                            <h2 class="font-mono text-4xl font-bold leading-tight leading md:text-5xl">Let's Create Timeless<br>Memories Together.</h2>
+                            <h2 class="font-mono text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">Let's Create Timeless<br>Memories Together.</h2>
                             <p class="max-w-md mt-6 text-lg leading-relaxed text-slate-300">I'd love to hear about your story and the memories you want to create. Whether it's weddings, protraits sessions, or intimate celebrations, every moments deserve to be preserved beautifully. I'm here to bring your vision to life.</p>
                         </div>
                          
@@ -1011,11 +1070,44 @@
                             </div>
                             
                             <!-- Social Links -->
-                            <div class="flex gap-4 pt-6">
-                                <a href="#" ><i class="px-4 py-3 mx-2 text-xl transition-all rounded-full bg-white/5 fa-brands fa-facebook-f hover:scale-110 hover:bg-white/10"></i></a>
-                                <a href="#" ><i class="p-3 mx-2 text-xl transition-all rounded-full bg-white/5 fa-brands fa-x-twitter hover:bg-white/10 hover:scale-110"></i></a>
-                                <a href="#"><i class="p-3 mx-2 text-xl transition-all rounded-full bg-white/5 fa-brands fa-linkedin-in hover:bg-white/10 hover:scale-110"></i></a>
-                                <a href="#"><i class="p-3 mx-2 text-xl transition-all rounded-full bg-white/5 fa-brands fa-instagram hover:bg-white/10 hover:scale-110" ></i></a>
+                            <div class="flex gap-3 pt-6">
+
+                                <!-- Facebook -->
+                                <a 
+                                    href="#" 
+                                    aria-label="Facebook"
+                                    class="flex items-center justify-center text-lg transition-all rounded-full w-11 h-11 bg-white/5 hover:border-amber-500/40 hover:bg-amber-500 hover:text-black hover:scale-110"
+                                >
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+
+                                <!-- X / Twitter -->
+                                <a 
+                                    href="#" 
+                                    aria-label="X / Twitter"
+                                    class="flex items-center justify-center text-lg transition-all rounded-full w-11 h-11 bg-white/5 hover:border-amber-500/40 hover:bg-amber-500 hover:text-black hover:scale-110"
+                                >
+                                    <i class="fa-brands fa-x-twitter"></i>
+                                </a>
+
+                                <!-- LinkedIn -->
+                                <a 
+                                    href="#" 
+                                    aria-label="LinkedIn"
+                                    class="flex items-center justify-center text-lg transition-all rounded-full w-11 h-11 bg-white/5 hover:border-amber-500/40 hover:bg-amber-500 hover:text-black hover:scale-110"
+                                >
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+
+                                <!-- Instagram -->
+                                <a 
+                                    href="#" 
+                                    aria-label="Instagram"
+                                    class="flex items-center justify-center text-lg transition-all rounded-full w-11 h-11 bg-white/5 hover:border-amber-500/40 hover:bg-amber-500 hover:text-black hover:scale-110"
+                                >
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+
                             </div>
                             
                         </div>
@@ -1023,14 +1115,18 @@
                     
                     
                     <!-- Right Side Contact Form  -->
-                    <form action="" method="post" class="p-8 space-y-8 border lg:p-10 border-amber-600/30 bg-white/5 backdrop-blur-xl rounded-3xl ">
+                    <form
+                        action=""
+                        method="post"
+                        class="w-full p-5 border space-y-7 sm:p-7 lg:p-10 border-amber-600/30 bg-white/5 backdrop-blur-xl rounded-3xl"
+                    >
                         <h2 class="text-3xl font-bold">Send a Message <hr class="w-12 mt-2 border-amber-600/90"></h2>
                         <div class="space-y-6">
                             <!-- Name -->
                             <label for="name" class="block mb-2 text-sm font-medium text-slate-400">Your Name</label>
                             
                             <div class="relative flex items-center text-slate-300 focus-within:text-slate-400">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="absolute w-5 ml-3 pointer-events-none" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="absolute w-5 ml-3 pointer-events-none" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" >
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
                                 </svg>
                                 
@@ -1050,7 +1146,7 @@
                                 <div>
                                     <label for="email" class="block mb-2 text-sm font-medium text-slate-400">Email</label>
                                     <div class="relative flex items-center text-slate-300 focus-within:text-slate-400">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute w-5 ml-3 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute w-5 ml-3 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
                                         </svg>
                                         <input type="email" 
@@ -1100,13 +1196,14 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 2.994v2.25m10.5-2.25v2.25m-14.252 13.5V7.491a2.25 2.25 0 0 1 2.25-2.25h13.5a2.25 2.25 0 0 1 2.25 2.25v11.251m-18 0a2.25 2.25 0 0 0 2.25 2.25h13.5a2.25 2.25 0 0 0 2.25-2.25m-18 0v-7.5a2.25 2.25 0 0 1 2.25-2.25h13.5a2.25 2.25 0 0 1 2.25 2.25v7.5m-6.75-6h2.25m-9 2.25h4.5m.002-2.25h.005v.006H12v-.006Zm-.001 4.5h.006v.006h-.006v-.005Zm-2.25.001h.005v.006H9.75v-.006Zm-2.25 0h.005v.005h-.006v-.005Zm6.75-2.247h.005v.005h-.005v-.005Zm0 2.247h.006v.006h-.006v-.006Zm2.25-2.248h.006V15H16.5v-.005Z" />
                                     </svg>
                                     
-                                    <input type=""
+                                    <input
+                                        type="date"
                                         name="date"
-                                        autocomplete="off"
-                                        aria-label="Yourname"
                                         id="date"
+                                        autocomplete="off"
+                                        required
                                         class="w-full py-3 pl-10 pr-4 font-semibold text-white rounded-lg outline-none ring-1 placeholder-slate-300 ring-slate-200/20 focus:ring-amber-400 focus:ring-1"
-                                    >
+                                    />
                                 </div>
                             </div>
                             
@@ -1142,7 +1239,7 @@
     <footer class="bg-black border-t border-white/10">
 
         <!-- Main Footer -->
-        <div class="px-6 py-16 mx-auto max-w-7xl sm:px-8 lg:px-12">
+        <div class="px-5 mx-auto py-14 max-w-7xl sm:px-6 sm:py-16 lg:px-12">
 
             <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
 
@@ -1378,35 +1475,61 @@
     
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        
-        document.getElementById('menu-toggle').addEventListener('click', function(){
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('hidden');
-        })
-        
-        document.getElementsByClassName('fa-bars')[0].addEventListener('click', function(){
-            if(this.classList.contains('fa-bars')){
-                this.classList.replace('fa-bars', 'fa-xmark');
-            }else{
-                this.classList.replace('fa-xmark', 'fa-bars');
-            }
-        })
+        const menuToggle = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const menuIcon = menuToggle.querySelector("i");
+        const mobileLinks = mobileMenu.querySelectorAll("a");
+
+        // Toggle mobile menu
+        menuToggle.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+
+            // Toggle menu icon
+            menuIcon.classList.toggle("fa-bars");
+            menuIcon.classList.toggle("fa-xmark");
+        });
+
+        // Close menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                mobileMenu.classList.add("hidden");
+
+                // Reset icon to hamburger
+                menuIcon.classList.remove("fa-xmark");
+                menuIcon.classList.add("fa-bars");
+            });
+        });
         
         const readMoreBtn = document.getElementById('read-more-btn');
         const expandableText = document.getElementById('expandable-text');
         const faArrowRightLong = document.getElementById('arrow');
 
-        readMoreBtn.addEventListener('click', function() {
-            if (expandableText.classList.contains('hidden')){
-                expandableText.classList.remove('hidden');
-                expandableText.style.animation = 'fadeIn 0.4s ease';
-                arrow.style.transform = 'rotate(180deg)';
-                readMoreBtn.innerHTML = 'Read less <span id="arrow" class="transition-transform"><i class="mx-2 fa-solid fa-arrow-down-long"></i></span>'
-            }else {
-                expandableText.classList.add('hidden');
-                arrow.style.transform = 'rotate(0deg)';
-                readMoreBtn.innerHTML = 'Read More <span id="arrow" class="transition-transform"><i class="mx-2 fa-solid fa-arrow-right-long"></i></span>';
+        readMoreBtn.addEventListener("click", function () {
 
+            const isHidden = expandableText.classList.contains("hidden");
+
+            if (isHidden) {
+
+                expandableText.classList.remove("hidden");
+                expandableText.style.animation = "fadeIn 0.4s ease";
+
+                readMoreBtn.innerHTML = `
+                    Read Less
+                    <span class="inline-block transition-transform rotate-180">
+                        <i class="mx-2 fa-solid fa-arrow-right-long"></i>
+                    </span>
+                `;
+
+            } else {
+
+                expandableText.classList.add("hidden");
+
+                readMoreBtn.innerHTML = `
+                    Read More
+                    <span class="inline-block">
+                        <i class="mx-2 fa-solid fa-arrow-right-long"></i>
+                    </span>
+                `;
             }
         });
 
@@ -1416,7 +1539,7 @@
             btn.addEventListener("click", () => {
                 const content = btn.nextElementSibling;
                 
-                const icon = btn.queryselector(".plus-sign");
+                const icon = btn.querySelector(".plus-sign");
                 
                 document.querySelectorAll(".accordion-content").forEach((item) => {
                     if(item !== content) {
@@ -1582,27 +1705,10 @@
 
         });
 
-        
-
-        const protraitSwiper = new Swiper(".protraitSwiper", {
-            loop:true,
-            autoplay: {
-                delay: 1200,
-                disableOnInteraction: false,
-            },
-            
-            effect: "fade",
-            
-            speed: 1800,
-        });
-
-        const swiper = new Swiper(".swiper", {
+        const testimonialSwiper = new Swiper(".testimonialSwiper", {
             slidesPerView: 1,
-
             spaceBetween: 24,
-
             loop: true,
-
             speed: 800,
 
             autoplay: {
@@ -1612,12 +1718,23 @@
             },
 
             grabCursor: true,
+        });
 
-            breakpoints: {
-                768: {
-                    slidesPerView: 1,
-                }
-            }
+           
+
+        document.querySelectorAll(".protraitSwiper").forEach((slider) => {
+            new Swiper(slider, {
+                loop: true,
+
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                },
+
+                effect: "fade",
+
+                speed: 1000,
+            });
         });
 
         const portfolioSwiper = new Swiper(".portfolioSwiper", {
